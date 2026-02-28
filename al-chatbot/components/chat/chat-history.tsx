@@ -5,15 +5,16 @@ import {SUBJECTS} from "@/components/chat/subject-config";
 import {Button} from "@/components/ui/button";
 
 interface Chat {
-    id: string;
+    id: number;
     title: string;
-    timestamp: string;
+    updated_at: string;
+    subject: string;
 }
 
 interface ChatHistoryProps {
     chats: Chat[];
-    activeChat: string | null;
-    onChatSelect: (chatId: string) => void;
+    activeChat: number | null;
+    onChatSelect: (chatId: number) => void;
     onNewChat: () => void;
     subject: string;
     onClose: () => void;
@@ -111,7 +112,7 @@ export const ChatHistory = ({
                                         : "hover:bg-gray-50 text-gray-700"
                                 }`}
                             >
-                                <div className="flex items-start gap-2">
+                                <div className="flex items-start gap-2 min-w-0">
                                     <MessageSquare
                                         className={`h-4 w-4 mt-0.5 shrink-0 ${isActive ? "text-white/80" : "text-gray-400"}`}
                                     />
@@ -120,7 +121,12 @@ export const ChatHistory = ({
                                             {chat.title}
                                         </p>
                                         <p className={`text-xs mt-0.5 ${isActive ? "text-white/70" : "text-gray-400"}`}>
-                                            {chat.timestamp}
+                                            {new Date(chat.updated_at).toLocaleDateString(undefined, {
+                                                month: "short",
+                                                day: "numeric",
+                                                hour: "2-digit",
+                                                minute: "2-digit",
+                                            })}
                                         </p>
                                     </div>
                                 </div>

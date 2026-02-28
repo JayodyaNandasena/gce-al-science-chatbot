@@ -12,7 +12,7 @@ import {Textarea} from "@/components/ui/textarea.js";
 import {SuggestedQuestions} from "@/components/chat/suggested-questions.js";
 import {toast} from "sonner";
 
-// Types
+// ─── Types ────────────────────────────────────────────────────────────────────
 
 export type Source = {
     content: string;
@@ -32,26 +32,28 @@ export type ChatMessage = {
     sources?: Source[];
 };
 
-export type Chat = {
+export type Conversation = {
     id: number;
     title: string;
-    timestamp: string;
     subject: string;
-    messages: ChatMessage[];
+    updated_at: string;
 };
 
-// Constants
+export type User = {
+    id: number;
+    name?: string;
+    email: string;
+};
 
-const CHAT_API_URL = "http://localhost:3000/api/chat";
+// ─── Constants ────────────────────────────────────────────────────────────────
+
+const CHAT_API_URL = "/api/chat";
+const CONVERSATIONS_API_URL = "/api/conversations";
 const STREAM_DELIMITER = "tokens-ended";
-const TITLE_MAX_LENGTH = 30;
+const TITLE_MAX_LENGTH = 15;
+const REDIRECT_MARKER = "Please switch to the";
 
-const INITIAL_CHATS: Chat[] = [
-    {id: 1, title: "Photosynthesis Discussion", timestamp: "2 hours ago", subject: "biology", messages: []},
-    {id: 2, title: "Cell Division Explained", timestamp: "Yesterday", subject: "biology", messages: []},
-];
-
-// Helpers
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function truncateTitle(text: string): string {
     return text.length > TITLE_MAX_LENGTH
@@ -74,7 +76,7 @@ async function parseSourcesFromBuffer(buffer: string): Promise<Source[]> {
     }
 }
 
-// Custom Hook
+// ─── Custom Hook ──────────────────────────────────────────────────────────────
 
 function useChatStream() {
     const [isStreaming, setIsStreaming] = useState(false);
@@ -83,15 +85,15 @@ function useChatStream() {
         async (
             question: string,
             subject: string,
+            chatHistory: [string, string][],
+            onStart: () => void,
             onChunk: (content: string) => void,
             onComplete: (sources: Source[]) => void
-        ): Promise<void> => {
-            setIsStreaming(true);
-
+        ): Promise<string> => {
             const response = await fetch(CHAT_API_URL, {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
-                body: JSON.stringify({question, subject, chatHistory: []}),
+                body: JSON.stringify({question, chatHistory, subject}),
             });
 
             if (!response.ok) throw new Error(`API error: ${response.status}`);
@@ -103,6 +105,7 @@ function useChatStream() {
             let fullContent = "";
             let sourcesBuffer = "";
             let tokensEnded = false;
+            let started = false;
 
             while (true) {
                 const {done, value} = await reader.read();
@@ -113,6 +116,11 @@ function useChatStream() {
                 if (tokensEnded) {
                     sourcesBuffer += chunk;
                     continue;
+                }
+
+                if (!started) {
+                    started = true;
+                    onStart();
                 }
 
                 if (chunk.includes(STREAM_DELIMITER)) {
@@ -130,6 +138,7 @@ function useChatStream() {
 
             const sources = await parseSourcesFromBuffer(sourcesBuffer);
             onComplete(sources);
+            return fullContent.trim();
         },
         []
     );
@@ -137,48 +146,162 @@ function useChatStream() {
     return {isStreaming, setIsStreaming, streamResponse};
 }
 
-// Component
+// ─── Component ────────────────────────────────────────────────────────────────
 
 const MultiSubjectChatbot = () => {
     const [subject, setSubject] = useState("biology");
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const [chats, setChats] = useState<Chat[]>(INITIAL_CHATS);
-    const [activeChat, setActiveChat] = useState<number>(INITIAL_CHATS[0].id);
+    const [conversations, setConversations] = useState<Conversation[]>([]);
+    const [activeConversationId, setActiveConversationId] = useState<number | null>(null);
     const [messages, setMessages] = useState<ChatMessage[]>([]);
     const [input, setInput] = useState("");
-    const [user, setUser] = useState<{ name?: string; email: string } | null>(null);
+    const [user, setUser] = useState<User | null>(null);
+    const [loadingMessages, setLoadingMessages] = useState(false);
 
     const scrollRef = useRef<HTMLDivElement>(null);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
+    const chatHistoryRef = useRef<[string, string][]>([]);
 
     const {isStreaming, setIsStreaming, streamResponse} = useChatStream();
 
     const config = SUBJECTS[subject];
     const Icon = config.icon;
 
-    // Initialise greeting whenever the active chat or subject changes
-    useEffect(() => {
-        setMessages([{role: "assistant", content: config.greeting, sources: []}]);
-    }, [activeChat, subject, config.greeting]);
+    // ── Data fetching ─────────────────────────────────────────────────────────
 
-    // fetch the current user
+    const loadConversations = useCallback(async (subjectFilter: string) => {
+        try {
+            const res = await fetch(
+                `${CONVERSATIONS_API_URL}?subject=${subjectFilter}`
+            );
+            if (!res.ok) throw new Error("Failed to fetch conversations");
+            const data: Conversation[] = await res.json();
+            setConversations(data);
+
+            if (data.length > 0) {
+                setActiveConversationId(data[0].id);
+            } else {
+                setActiveConversationId(null);
+                chatHistoryRef.current = [];
+                setMessages([{
+                    role: "assistant",
+                    content: config.greeting,
+                    sources: [],
+                }]);
+            }
+        } catch (error) {
+            console.error("Failed to load conversations:", error);
+            toast.error("Failed to load conversations");
+        }
+    }, [config.greeting]);
+
+    const loadMessages = useCallback(async (conversationId: number) => {
+        setLoadingMessages(true);
+        chatHistoryRef.current = [];
+
+        try {
+            const res = await fetch(
+                `${CONVERSATIONS_API_URL}/${conversationId}/messages`
+            );
+            if (!res.ok) throw new Error("Failed to fetch messages");
+            const data: ChatMessage[] = await res.json();
+
+            if (data.length === 0) {
+                setMessages([{
+                    role: "assistant",
+                    content: config.greeting,
+                    sources: [],
+                }]);
+            } else {
+                setMessages(data);
+
+                // Rebuild LLM history from saved messages (skip redirects)
+                const pairs: [string, string][] = [];
+                for (let i = 0; i < data.length - 1; i++) {
+                    if (
+                        data[i].role === "user" &&
+                        data[i + 1].role === "assistant" &&
+                        !data[i + 1].content.includes(REDIRECT_MARKER)
+                    ) {
+                        pairs.push([data[i].content, data[i + 1].content]);
+                        i++;
+                    }
+                }
+                chatHistoryRef.current = pairs;
+            }
+        } catch (error) {
+            console.error("Failed to load messages:", error);
+            toast.error("Failed to load messages");
+        } finally {
+            setLoadingMessages(false);
+        }
+    }, [config.greeting]);
+
+    // ── Effects ───────────────────────────────────────────────────────────────
+
+    useEffect(() => {
+        loadConversations(subject);
+    }, [subject]);
+
+    useEffect(() => {
+        if (activeConversationId !== null) {
+            loadMessages(activeConversationId);
+        }
+    }, [activeConversationId]);
+
     useEffect(() => {
         fetch("/api/auth/me")
-            .then((res) => res.ok ? res.json() : null)
-            .then((data) => {
-                if (data?.user) setUser(data.user);
-            })
+            .then((res) => (res.ok ? res.json() : null))
+            .then((data) => { if (data?.user) setUser(data.user); })
             .catch(() => null);
     }, []);
 
-    // Auto-scroll to the latest message
     useEffect(() => {
         if (scrollRef.current) {
             scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
         }
     }, [messages, isStreaming]);
 
-    // Message helpers
+    // ── DB helpers ────────────────────────────────────────────────────────────
+
+    const createConversation = useCallback(async (forSubject: string): Promise<Conversation> => {
+        const res = await fetch(CONVERSATIONS_API_URL, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({subject: forSubject}),
+        });
+        if (!res.ok) throw new Error("Failed to create conversation");
+        return res.json();
+    }, []);
+
+    const saveMessage = useCallback(async (
+        conversationId: number,
+        role: "user" | "assistant",
+        content: string,
+        sources?: Source[]
+    ) => {
+        await fetch(`${CONVERSATIONS_API_URL}/${conversationId}/messages`, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({role, content, sources}),
+        });
+    }, []);
+
+    const updateConversationTitle = useCallback(async (
+        conversationId: number,
+        title: string
+    ) => {
+        await fetch(`${CONVERSATIONS_API_URL}/${conversationId}`, {
+            method: "PATCH",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({title}),
+        });
+        setConversations((prev) =>
+            prev.map((c) => (c.id === conversationId ? {...c, title} : c))
+        );
+    }, []);
+
+    // ── Message helpers ───────────────────────────────────────────────────────
 
     const appendMessage = useCallback((message: ChatMessage) => {
         setMessages((prev) => [...prev, message]);
@@ -190,46 +313,100 @@ const MultiSubjectChatbot = () => {
         );
     }, []);
 
-    // Chat title
+    // ── Conversation management ───────────────────────────────────────────────
 
-    const setActiveChatTitle = useCallback(
-        (title: string) => {
-            setChats((prev) =>
-                prev.map((chat) =>
-                    chat.id === activeChat ? {...chat, title: truncateTitle(title)} : chat
-                )
-            );
-        },
-        [activeChat]
-    );
+    const handleNewChat = useCallback(async () => {
+        try {
+            const newConv = await createConversation(subject);
+            setConversations((prev) => [newConv, ...prev]);
+            setActiveConversationId(newConv.id);
+            chatHistoryRef.current = [];
+            setMessages([{role: "assistant", content: config.greeting, sources: []}]);
+        } catch (error) {
+            console.error("Failed to create conversation:", error);
+            toast.error("Failed to create conversation");
+        }
+    }, [subject, config.greeting, createConversation]);
 
-    // Send
+    const handleSubjectChange = useCallback((newSubject: string) => {
+        setSubject(newSubject);
+        // loadConversations fires via subject useEffect
+    }, []);
+
+    const handleConversationSelect = useCallback((id: number) => {
+        setActiveConversationId(id);
+    }, []);
+
+    // ── Send ──────────────────────────────────────────────────────────────────
 
     const handleSend = useCallback(async () => {
         const trimmed = input.trim();
         if (!trimmed || isStreaming) return;
 
-        appendMessage({role: "user", content: trimmed, sources: []});
-
-        // Update chat title on the first user message
-        if (messages.length === 1) setActiveChatTitle(trimmed);
-
         setInput("");
         setIsStreaming(true);
 
-        try {
-            appendMessage(buildAssistantPlaceholder());
+        // Create conversation in DB if none is active
+        let conversationId = activeConversationId;
+        if (conversationId === null) {
+            try {
+                const newConv = await createConversation(subject);
+                setConversations((prev) => [newConv, ...prev]);
+                setActiveConversationId(newConv.id);
+                conversationId = newConv.id;
+            } catch (error) {
+                console.error("Failed to create conversation:", error);
+                toast.error("Failed to start conversation");
+                setIsStreaming(false);
+                return;
+            }
+        }
 
-            await streamResponse(
+        // Add user message to UI and save to DB
+        appendMessage({role: "user", content: trimmed, sources: []});
+        await saveMessage(conversationId, "user", trimmed);
+
+        // Update title on first user message
+        const isFirstMessage = messages.filter((m) => m.role === "user").length === 0;
+        if (isFirstMessage) {
+            await updateConversationTitle(conversationId, truncateTitle(trimmed));
+        }
+
+        try {
+            let finalSources: Source[] = [];
+
+            const assistantContent = await streamResponse(
                 trimmed,
                 subject,
+                chatHistoryRef.current,
+                () => appendMessage(buildAssistantPlaceholder()),
                 (content) => updateLastMessage((msg) => ({...msg, content})),
                 (sources) => {
+                    finalSources = sources;
                     if (sources.length > 0) {
                         updateLastMessage((msg) => ({...msg, sources}));
                     }
                 }
             );
+
+            // Save assistant message to DB
+            if (assistantContent) {
+                await saveMessage(
+                    conversationId,
+                    "assistant",
+                    assistantContent,
+                    finalSources.length > 0 ? finalSources : undefined
+                );
+            }
+
+            // Update LLM history — skip redirect messages
+            if (assistantContent && !assistantContent.includes(REDIRECT_MARKER)) {
+                chatHistoryRef.current = [
+                    ...chatHistoryRef.current,
+                    [trimmed, assistantContent],
+                ];
+            }
+
         } catch (error) {
             console.error("Chat API error:", error);
             updateLastMessage(() => ({
@@ -243,16 +420,19 @@ const MultiSubjectChatbot = () => {
     }, [
         input,
         isStreaming,
-        messages.length,
+        activeConversationId,
         subject,
+        messages,
         appendMessage,
         updateLastMessage,
-        setActiveChatTitle,
+        saveMessage,
+        updateConversationTitle,
+        createConversation,
         setIsStreaming,
         streamResponse,
     ]);
 
-    // Input handlers
+    // ── Input handlers ────────────────────────────────────────────────────────
 
     const handleKeyDown = useCallback(
         (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -272,60 +452,24 @@ const MultiSubjectChatbot = () => {
     const handleLogout = useCallback(async () => {
         await fetch("/api/auth/logout", {method: "POST"});
         toast.success("Signed out successfully");
-        setTimeout(() => {
-            window.location.href = "/login";
-        }, 1000); // 1 second for the toast to show
+        setTimeout(() => { window.location.href = "/login"; }, 1000);
     }, []);
 
-    // Subject management
+    // ── Derived ───────────────────────────────────────────────────────────────
 
-    const createNewChat = useCallback(
-        (forSubject: string): Chat => ({
-            id: Date.now(),
-            title: "New Chat",
-            timestamp: "Just now",
-            subject: forSubject,
-            messages: [],
-        }),
-        []
-    );
-
-    const handleNewChat = useCallback(() => {
-        const newChat = createNewChat(subject);
-        setChats((prev) => [newChat, ...prev]);
-        setActiveChat(newChat.id);
-    }, [subject, createNewChat]);
-
-    const handleSubjectChange = useCallback(
-        (newSubject: string) => {
-            setSubject(newSubject);
-            const existingChat = chats.find((c) => c.subject === newSubject);
-            if (existingChat) {
-                setActiveChat(existingChat.id);
-            } else {
-                const newChat = createNewChat(newSubject);
-                setChats((prev) => [newChat, ...prev]);
-                setActiveChat(newChat.id);
-            }
-        },
-        [chats, createNewChat]
-    );
-
-    // Derived
-
-    const subjectChats = chats.filter((c) => c.subject === subject);
+    const subjectConversations = conversations.filter((c) => c.subject === subject);
     const isFirstMessage = messages.length === 1;
 
-    // Render
+    // ── Render ────────────────────────────────────────────────────────────────
 
     return (
         <div className="flex h-screen bg-gray-50">
             {/* Sidebar */}
             <div className={`${sidebarOpen ? "block" : "hidden"} lg:block fixed lg:relative z-20 h-full`}>
                 <ChatHistory
-                    chats={subjectChats}
-                    activeChat={activeChat}
-                    onChatSelect={setActiveChat}
+                    chats={subjectConversations}
+                    activeChat={activeConversationId}
+                    onChatSelect={handleConversationSelect}
                     onNewChat={handleNewChat}
                     subject={subject}
                     onClose={() => setSidebarOpen(false)}
@@ -370,7 +514,6 @@ const MultiSubjectChatbot = () => {
                             </p>
                         </div>
 
-                        {/* Subject switcher */}
                         <nav className="flex gap-2" aria-label="Subject switcher">
                             {Object.entries(SUBJECTS).map(([key, subjectConfig]) => {
                                 const SubjectIcon = subjectConfig.icon;
@@ -397,18 +540,24 @@ const MultiSubjectChatbot = () => {
                 <main className="flex-1 overflow-hidden">
                     <ScrollArea ref={scrollRef} className="h-full">
                         <div className="max-w-4xl mx-auto px-4 py-6">
-                            {messages.map((message, index) => (
-                                <Message
-                                    key={index}
-                                    message={message}
-                                    sources={message.sources ?? []}
-                                    config={config}
-                                />
-                            ))}
+                            {loadingMessages ? (
+                                <div className="flex justify-center items-center h-32 text-gray-400 text-sm">
+                                    Loading messages…
+                                </div>
+                            ) : (
+                                messages.map((message, index) => (
+                                    <Message
+                                        key={index}
+                                        message={message}
+                                        sources={message.sources ?? []}
+                                        config={config}
+                                    />
+                                ))
+                            )}
 
                             {isStreaming && <TypingIndicator config={config}/>}
 
-                            {isFirstMessage && (
+                            {isFirstMessage && !loadingMessages && (
                                 <SuggestedQuestions
                                     suggestions={config.suggestions}
                                     onSelect={handleSuggestionClick}
@@ -433,12 +582,13 @@ const MultiSubjectChatbot = () => {
                                     className={`min-h-[52px] max-h-32 resize-none rounded-xl ${config.borderColor} focus:${config.borderColor} pr-12`}
                                     rows={1}
                                     aria-label="Chat input"
+                                    disabled={loadingMessages}
                                 />
                             </div>
 
                             <Button
                                 onClick={handleSend}
-                                disabled={!input.trim() || isStreaming}
+                                disabled={!input.trim() || isStreaming || loadingMessages}
                                 aria-label="Send message"
                                 className={`h-[52px] w-[52px] rounded-xl bg-gradient-to-br ${config.gradient} hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed shadow-md`}
                             >

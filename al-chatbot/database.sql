@@ -47,9 +47,13 @@ CREATE TABLE IF NOT EXISTS subjects (
 -- Conversation table
 CREATE TABLE IF NOT EXISTS conversations (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(255) NOT NULL UNIQUE,
+  user_id INT NOT NULL,
+  subject VARCHAR(50) NOT NULL,
+  title VARCHAR(255) NOT NULL DEFAULT 'New Chat',
   is_deleted BOOLEAN DEFAULT FALSE,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
 -- Messages table
@@ -58,8 +62,8 @@ CREATE TABLE IF NOT EXISTS messages (
   conversation_id INT NOT NULL,
   role ENUM('user', 'assistant') NOT NULL,
   content TEXT NOT NULL,
+  sources JSON NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  CONSTRAINT subject_name_stream UNIQUE (name, stream),
   FOREIGN KEY (conversation_id) REFERENCES conversations(id) ON DELETE CASCADE
 );
 
