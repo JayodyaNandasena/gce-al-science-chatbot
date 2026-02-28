@@ -1,17 +1,18 @@
 "use client"
 
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { Menu, Send } from "lucide-react";
-import { SUBJECTS } from "@/components/chat/subject-config.js";
-import { ChatHistory } from "@/components/chat/chat-history.js";
-import { Button } from "@/components/ui/button.js";
-import { ScrollArea } from "@/components/ui/scroll-area.js";
-import { Message } from "@/components/chat/message.js";
-import { TypingIndicator } from "@/components/chat/typing-indicator.js";
-import { Textarea } from "@/components/ui/textarea.js";
-import { SuggestedQuestions } from "@/components/chat/suggested-questions.js";
+import React, {useCallback, useEffect, useRef, useState} from "react";
+import {Menu, Send} from "lucide-react";
+import {SUBJECTS} from "@/components/chat/subject-config.js";
+import {ChatHistory} from "@/components/chat/chat-history.js";
+import {Button} from "@/components/ui/button.js";
+import {ScrollArea} from "@/components/ui/scroll-area.js";
+import {Message} from "@/components/chat/message.js";
+import {TypingIndicator} from "@/components/chat/typing-indicator.js";
+import {Textarea} from "@/components/ui/textarea.js";
+import {SuggestedQuestions} from "@/components/chat/suggested-questions.js";
+import {toast} from "sonner";
 
-// ─── Types ────────────────────────────────────────────────────────────────────
+// Types
 
 export type Source = {
     content: string;
@@ -39,18 +40,18 @@ export type Chat = {
     messages: ChatMessage[];
 };
 
-// ─── Constants ────────────────────────────────────────────────────────────────
+// Constants
 
 const CHAT_API_URL = "http://localhost:3000/api/chat";
 const STREAM_DELIMITER = "tokens-ended";
 const TITLE_MAX_LENGTH = 30;
 
 const INITIAL_CHATS: Chat[] = [
-    { id: 1, title: "Photosynthesis Discussion", timestamp: "2 hours ago", subject: "biology", messages: [] },
-    { id: 2, title: "Cell Division Explained",   timestamp: "Yesterday",   subject: "biology", messages: [] },
+    {id: 1, title: "Photosynthesis Discussion", timestamp: "2 hours ago", subject: "biology", messages: []},
+    {id: 2, title: "Cell Division Explained", timestamp: "Yesterday", subject: "biology", messages: []},
 ];
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
+// Helpers
 
 function truncateTitle(text: string): string {
     return text.length > TITLE_MAX_LENGTH
@@ -59,7 +60,7 @@ function truncateTitle(text: string): string {
 }
 
 function buildAssistantPlaceholder(): ChatMessage {
-    return { role: "assistant", content: "", sources: [] };
+    return {role: "assistant", content: "", sources: []};
 }
 
 async function parseSourcesFromBuffer(buffer: string): Promise<Source[]> {
@@ -73,7 +74,7 @@ async function parseSourcesFromBuffer(buffer: string): Promise<Source[]> {
     }
 }
 
-// ─── Custom Hook ──────────────────────────────────────────────────────────────
+// Custom Hook
 
 function useChatStream() {
     const [isStreaming, setIsStreaming] = useState(false);
@@ -89,8 +90,8 @@ function useChatStream() {
 
             const response = await fetch(CHAT_API_URL, {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ question, subject, chatHistory: [] }),
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({question, subject, chatHistory: []}),
             });
 
             if (!response.ok) throw new Error(`API error: ${response.status}`);
@@ -104,10 +105,10 @@ function useChatStream() {
             let tokensEnded = false;
 
             while (true) {
-                const { done, value } = await reader.read();
+                const {done, value} = await reader.read();
                 if (done) break;
 
-                const chunk = decoder.decode(value, { stream: true });
+                const chunk = decoder.decode(value, {stream: true});
 
                 if (tokensEnded) {
                     sourcesBuffer += chunk;
@@ -133,31 +134,42 @@ function useChatStream() {
         []
     );
 
-    return { isStreaming, setIsStreaming, streamResponse };
+    return {isStreaming, setIsStreaming, streamResponse};
 }
 
-// ─── Component ────────────────────────────────────────────────────────────────
+// Component
 
 const MultiSubjectChatbot = () => {
-    const [subject, setSubject]         = useState("biology");
+    const [subject, setSubject] = useState("biology");
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const [chats, setChats]             = useState<Chat[]>(INITIAL_CHATS);
-    const [activeChat, setActiveChat]   = useState<number>(INITIAL_CHATS[0].id);
-    const [messages, setMessages]       = useState<ChatMessage[]>([]);
-    const [input, setInput]             = useState("");
+    const [chats, setChats] = useState<Chat[]>(INITIAL_CHATS);
+    const [activeChat, setActiveChat] = useState<number>(INITIAL_CHATS[0].id);
+    const [messages, setMessages] = useState<ChatMessage[]>([]);
+    const [input, setInput] = useState("");
+    const [user, setUser] = useState<{ name?: string; email: string } | null>(null);
 
-    const scrollRef    = useRef<HTMLDivElement>(null);
-    const textareaRef  = useRef<HTMLTextAreaElement>(null);
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-    const { isStreaming, setIsStreaming, streamResponse } = useChatStream();
+    const {isStreaming, setIsStreaming, streamResponse} = useChatStream();
 
     const config = SUBJECTS[subject];
-    const Icon   = config.icon;
+    const Icon = config.icon;
 
     // Initialise greeting whenever the active chat or subject changes
     useEffect(() => {
-        setMessages([{ role: "assistant", content: config.greeting, sources: [] }]);
+        setMessages([{role: "assistant", content: config.greeting, sources: []}]);
     }, [activeChat, subject, config.greeting]);
+
+    // fetch the current user
+    useEffect(() => {
+        fetch("/api/auth/me")
+            .then((res) => res.ok ? res.json() : null)
+            .then((data) => {
+                if (data?.user) setUser(data.user);
+            })
+            .catch(() => null);
+    }, []);
 
     // Auto-scroll to the latest message
     useEffect(() => {
@@ -166,7 +178,7 @@ const MultiSubjectChatbot = () => {
         }
     }, [messages, isStreaming]);
 
-    // ── Message helpers ──────────────────────────────────────────────────────
+    // Message helpers
 
     const appendMessage = useCallback((message: ChatMessage) => {
         setMessages((prev) => [...prev, message]);
@@ -178,26 +190,26 @@ const MultiSubjectChatbot = () => {
         );
     }, []);
 
-    // ── Chat title ───────────────────────────────────────────────────────────
+    // Chat title
 
     const setActiveChatTitle = useCallback(
         (title: string) => {
             setChats((prev) =>
                 prev.map((chat) =>
-                    chat.id === activeChat ? { ...chat, title: truncateTitle(title) } : chat
+                    chat.id === activeChat ? {...chat, title: truncateTitle(title)} : chat
                 )
             );
         },
         [activeChat]
     );
 
-    // ── Send ─────────────────────────────────────────────────────────────────
+    // Send
 
     const handleSend = useCallback(async () => {
         const trimmed = input.trim();
         if (!trimmed || isStreaming) return;
 
-        appendMessage({ role: "user", content: trimmed, sources: [] });
+        appendMessage({role: "user", content: trimmed, sources: []});
 
         // Update chat title on the first user message
         if (messages.length === 1) setActiveChatTitle(trimmed);
@@ -211,10 +223,10 @@ const MultiSubjectChatbot = () => {
             await streamResponse(
                 trimmed,
                 subject,
-                (content) => updateLastMessage((msg) => ({ ...msg, content })),
+                (content) => updateLastMessage((msg) => ({...msg, content})),
                 (sources) => {
                     if (sources.length > 0) {
-                        updateLastMessage((msg) => ({ ...msg, sources }));
+                        updateLastMessage((msg) => ({...msg, sources}));
                     }
                 }
             );
@@ -240,7 +252,7 @@ const MultiSubjectChatbot = () => {
         streamResponse,
     ]);
 
-    // ── Input handlers ───────────────────────────────────────────────────────
+    // Input handlers
 
     const handleKeyDown = useCallback(
         (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -257,7 +269,15 @@ const MultiSubjectChatbot = () => {
         textareaRef.current?.focus();
     }, []);
 
-    // ── Chat / subject management ────────────────────────────────────────────
+    const handleLogout = useCallback(async () => {
+        await fetch("/api/auth/logout", {method: "POST"});
+        toast.success("Signed out successfully");
+        setTimeout(() => {
+            window.location.href = "/login";
+        }, 1000); // 1 second for the toast to show
+    }, []);
+
+    // Subject management
 
     const createNewChat = useCallback(
         (forSubject: string): Chat => ({
@@ -291,12 +311,12 @@ const MultiSubjectChatbot = () => {
         [chats, createNewChat]
     );
 
-    // ── Derived ──────────────────────────────────────────────────────────────
+    // Derived
 
-    const subjectChats   = chats.filter((c) => c.subject === subject);
+    const subjectChats = chats.filter((c) => c.subject === subject);
     const isFirstMessage = messages.length === 1;
 
-    // ── Render ───────────────────────────────────────────────────────────────
+    // Render
 
     return (
         <div className="flex h-screen bg-gray-50">
@@ -309,6 +329,8 @@ const MultiSubjectChatbot = () => {
                     onNewChat={handleNewChat}
                     subject={subject}
                     onClose={() => setSidebarOpen(false)}
+                    user={user}
+                    onLogout={handleLogout}
                 />
             </div>
 
@@ -332,15 +354,15 @@ const MultiSubjectChatbot = () => {
                             className="lg:hidden"
                             aria-label="Toggle sidebar"
                         >
-                            <Menu className="w-5 h-5" />
+                            <Menu className="w-5 h-5"/>
                         </Button>
 
                         <div className={`bg-gradient-to-br ${config.gradient} p-2 rounded-lg`}>
-                            <Icon className="w-6 h-6 text-white" />
+                            <Icon className="w-6 h-6 text-white"/>
                         </div>
 
                         <div className="flex-1">
-                            <h1 className="text-xl font-semibold text-gray-800">
+                            <h1 className="text-l font-semibold text-gray-800">
                                 {config.name} Learning Assistant
                             </h1>
                             <p className="text-sm text-gray-500">
@@ -352,7 +374,7 @@ const MultiSubjectChatbot = () => {
                         <nav className="flex gap-2" aria-label="Subject switcher">
                             {Object.entries(SUBJECTS).map(([key, subjectConfig]) => {
                                 const SubjectIcon = subjectConfig.icon;
-                                const isActive    = subject === key;
+                                const isActive = subject === key;
                                 return (
                                     <Button
                                         key={key}
@@ -362,7 +384,7 @@ const MultiSubjectChatbot = () => {
                                         aria-pressed={isActive}
                                         className={isActive ? `bg-gradient-to-r ${subjectConfig.gradient}` : ""}
                                     >
-                                        <SubjectIcon className="w-4 h-4 mr-2" />
+                                        <SubjectIcon className="w-4 h-4 mr-2"/>
                                         <span className="hidden sm:inline">{subjectConfig.name}</span>
                                     </Button>
                                 );
@@ -384,7 +406,7 @@ const MultiSubjectChatbot = () => {
                                 />
                             ))}
 
-                            {isStreaming && <TypingIndicator config={config} />}
+                            {isStreaming && <TypingIndicator config={config}/>}
 
                             {isFirstMessage && (
                                 <SuggestedQuestions
@@ -420,7 +442,7 @@ const MultiSubjectChatbot = () => {
                                 aria-label="Send message"
                                 className={`h-[52px] w-[52px] rounded-xl bg-gradient-to-br ${config.gradient} hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed shadow-md`}
                             >
-                                <Send className="w-5 h-5" />
+                                <Send className="w-5 h-5"/>
                             </Button>
                         </div>
 
