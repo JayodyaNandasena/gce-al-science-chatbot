@@ -178,17 +178,25 @@ const MultiSubjectChatbot = () => {
             const data: Conversation[] = await res.json();
             setConversations(data);
 
-            if (data.length > 0) {
-                setActiveConversationId(data[0].id);
-            } else {
-                setActiveConversationId(null);
-                chatHistoryRef.current = [];
-                setMessages([{
-                    role: "assistant",
-                    content: config.greeting,
-                    sources: [],
-                }]);
-            }
+            // if (data.length > 0) {
+            //     setActiveConversationId(data[0].id);
+            // } else {
+            //     setActiveConversationId(null);
+            //     chatHistoryRef.current = [];
+            //     setMessages([{
+            //         role: "assistant",
+            //         content: config.greeting,
+            //         sources: [],
+            //     }]);
+            // }
+
+            setActiveConversationId(null);
+            chatHistoryRef.current = [];
+            setMessages([{
+                role: "assistant",
+                content: config.greeting,
+                sources: [],
+            }]);
         } catch (error) {
             console.error("Failed to load conversations:", error);
             toast.error("Failed to load conversations");
@@ -252,7 +260,9 @@ const MultiSubjectChatbot = () => {
     useEffect(() => {
         fetch("/api/auth/me")
             .then((res) => (res.ok ? res.json() : null))
-            .then((data) => { if (data?.user) setUser(data.user); })
+            .then((data) => {
+                if (data?.user) setUser(data.user);
+            })
             .catch(() => null);
     }, []);
 
@@ -452,7 +462,9 @@ const MultiSubjectChatbot = () => {
     const handleLogout = useCallback(async () => {
         await fetch("/api/auth/logout", {method: "POST"});
         toast.success("Signed out successfully");
-        setTimeout(() => { window.location.href = "/login"; }, 1000);
+        setTimeout(() => {
+            window.location.href = "/login";
+        }, 1000);
     }, []);
 
     // ── Derived ───────────────────────────────────────────────────────────────
@@ -475,6 +487,20 @@ const MultiSubjectChatbot = () => {
                     onClose={() => setSidebarOpen(false)}
                     user={user}
                     onLogout={handleLogout}
+                    onChatDeleted={(id) => {
+                        setConversations((prev) => prev.filter((c) => c.id !== id));
+                        if (activeConversationId === id) {
+                            // Pick the next available conversation or reset to empty
+                            const remaining = conversations.filter((c) => c.id !== id && c.subject === subject);
+                            if (remaining.length > 0) {
+                                setActiveConversationId(remaining[0].id);
+                            } else {
+                                setActiveConversationId(null);
+                                chatHistoryRef.current = [];
+                                setMessages([{role: "assistant", content: config.greeting, sources: []}]);
+                            }
+                        }
+                    }}
                 />
             </div>
 
