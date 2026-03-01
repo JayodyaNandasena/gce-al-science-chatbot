@@ -12,7 +12,7 @@ export interface User {
 
 export async function getCurrentUser(): Promise<User | null> {
     try {
-        const cookieStore = await cookies();           // ← await added
+        const cookieStore = await cookies();
         const token = cookieStore.get('auth-token')?.value;
         if (!token) return null;
 

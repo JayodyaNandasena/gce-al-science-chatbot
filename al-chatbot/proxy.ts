@@ -1,11 +1,11 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { verifyToken } from './lib/jwt';
+import {NextRequest, NextResponse} from 'next/server';
+import {verifyToken} from './lib/jwt';
 
 const publicRoutes = ['/login', '/signup', '/forgot-password', '/reset-password', '/verify-email'];
 const authRoutes = ['/login', '/signup'];
 
 export function proxy(req: NextRequest) {
-    const { pathname } = req.nextUrl;
+    const {pathname} = req.nextUrl;
     const token = req.cookies.get('auth-token')?.value;
     const isAuthenticated = token ? !!verifyToken(token) : false;
 

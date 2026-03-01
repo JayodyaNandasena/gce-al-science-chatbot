@@ -1,26 +1,27 @@
 import nodemailer from 'nodemailer';
+import {env} from "@/lib/config.js";
 
 const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || 'smtp.gmail.com',
-  port: Number(process.env.SMTP_PORT) || 587,
-  secure: process.env.SMTP_SECURE === 'true',
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASSWORD,
-  },
+    host: env.SMTP_HOST || 'smtp.gmail.com',
+    port: Number(env.SMTP_PORT) || 587,
+    secure: env.SMTP_SECURE,
+    auth: {
+        user: env.SMTP_USER,
+        pass: env.SMTP_PASSWORD,
+    },
 });
 
-const APP_URL = process.env.APP_URL || 'http://localhost:3000';
-const EMAIL_FROM = process.env.EMAIL_FROM || 'noreply@example.com';
+const APP_URL = env.APP_URL || 'http://localhost:3000';
+const EMAIL_FROM = env.EMAIL_FROM || 'noreply@example.com';
 
 export async function sendVerificationEmail(email: string, token: string, name?: string) {
-  const verificationUrl = `${APP_URL}/verify-email?token=${token}`;
+    const verificationUrl = `${APP_URL}/verify-email?token=${token}`;
 
-  await transporter.sendMail({
-    from: `"A/L Science Assistant" <${EMAIL_FROM}>`,
-    to: email,
-    subject: 'Verify your email address',
-    html: `
+    await transporter.sendMail({
+        from: `"A/L Science Assistant" <${EMAIL_FROM}>`,
+        to: email,
+        subject: 'Verify your email address',
+        html: `
       <!DOCTYPE html>
       <html>
         <head>
@@ -53,17 +54,17 @@ export async function sendVerificationEmail(email: string, token: string, name?:
         </body>
       </html>
     `,
-  });
+    });
 }
 
 export async function sendPasswordResetEmail(email: string, token: string) {
-  const resetUrl = `${APP_URL}/reset-password?token=${token}`;
+    const resetUrl = `${APP_URL}/reset-password?token=${token}`;
 
-  await transporter.sendMail({
-    from: `"A/L Science Assistant" <${EMAIL_FROM}>`,
-    to: email,
-    subject: 'Reset your password',
-    html: `
+    await transporter.sendMail({
+        from: `"A/L Science Assistant" <${EMAIL_FROM}>`,
+        to: email,
+        subject: 'Reset your password',
+        html: `
       <!DOCTYPE html>
       <html>
         <head>
@@ -95,5 +96,5 @@ export async function sendPasswordResetEmail(email: string, token: string) {
         </body>
       </html>
     `,
-  });
+    });
 }

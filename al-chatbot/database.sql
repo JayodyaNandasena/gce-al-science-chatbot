@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS subjects (
   CONSTRAINT subject_name_stream UNIQUE (name, stream)
 );
 
--- Conversation table
+-- Conversations table
 CREATE TABLE IF NOT EXISTS conversations (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
