@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import {Geist, Geist_Mono, Inter} from "next/font/google";
 import {Toaster} from "sonner";
+import {TooltipProvider} from "@/components/ui/tooltip"
 import "./globals.css";
 
 const inter = Inter({subsets: ['latin'], variable: '--font-sans'});
@@ -27,12 +28,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={inter.variable}>
-        <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-        {children}
-        <Toaster position="top-right" richColors/>
-        </body>
+            <body
+                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+            >
+                <TooltipProvider>{children}</TooltipProvider>
+                {/*{children}*/}
+                <Toaster position="top-right" richColors/>
+            </body>
         </html>
     );
 }

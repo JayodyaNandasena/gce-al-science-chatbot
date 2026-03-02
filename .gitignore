@@ -1,0 +1,15 @@
+/data-preprocessing/__pycache__/
+/data-preprocessing/logs/
+/data-preprocessing/output/
+/data-preprocessing/cache/
+/data-preprocessing/venv/
+al-chatbot/.idea/
+
+.env
+.env.*
+.idea/.gitignore
+.idea/gce-al-science-chatbot.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+

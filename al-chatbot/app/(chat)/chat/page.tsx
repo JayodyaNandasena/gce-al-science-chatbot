@@ -1,7 +1,7 @@
 "use client"
 
 import React, {useCallback, useEffect, useRef, useState} from "react";
-import {Menu, Send} from "lucide-react";
+import {BookOpen, ChevronUp, Lightbulb, Menu, Send} from "lucide-react";
 import {SUBJECTS} from "@/components/chat/subject-config.js";
 import {ChatHistory} from "@/components/chat/chat-history.js";
 import {Button} from "@/components/ui/button.js";
@@ -9,7 +9,9 @@ import {ScrollArea} from "@/components/ui/scroll-area.js";
 import {Message} from "@/components/chat/message.js";
 import {TypingIndicator} from "@/components/chat/typing-indicator.js";
 import {Textarea} from "@/components/ui/textarea.js";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu";
 import {SuggestedQuestions} from "@/components/chat/suggested-questions.js";
+import {ModeBanner} from "@/components/chat/mode-banner";
 import {toast} from "sonner";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -85,6 +87,7 @@ function useChatStream() {
         async (
             question: string,
             subject: string,
+            mode: string,
             chatHistory: [string, string][],
             onStart: () => void,
             onChunk: (content: string) => void,
@@ -93,7 +96,7 @@ function useChatStream() {
             const response = await fetch(CHAT_API_URL, {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
-                body: JSON.stringify({question, chatHistory, subject}),
+                body: JSON.stringify({question, chatHistory, subject, mode}),
             });
 
             if (!response.ok) throw new Error(`API error: ${response.status}`);
@@ -157,6 +160,7 @@ const MultiSubjectChatbot = () => {
     const [input, setInput] = useState("");
     const [user, setUser] = useState<User | null>(null);
     const [loadingMessages, setLoadingMessages] = useState(false);
+    const [mode, setMode] = useState<"answer" | "reference">("answer");
 
     const scrollRef = useRef<HTMLDivElement>(null);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -388,6 +392,7 @@ const MultiSubjectChatbot = () => {
             const assistantContent = await streamResponse(
                 trimmed,
                 subject,
+                mode,
                 chatHistoryRef.current,
                 () => appendMessage(buildAssistantPlaceholder()),
                 (content) => updateLastMessage((msg) => ({...msg, content})),
@@ -430,6 +435,7 @@ const MultiSubjectChatbot = () => {
     }, [
         input,
         isStreaming,
+        mode,
         activeConversationId,
         subject,
         messages,
@@ -564,6 +570,10 @@ const MultiSubjectChatbot = () => {
 
                 {/* Messages */}
                 <main className="flex-1 overflow-hidden">
+                    <div className="max-w-4xl mx-auto px-4 py-6">
+                        {/* Mode banner */}
+                        <ModeBanner mode={mode} gradient={config.gradient}/>
+                    </div>
                     <ScrollArea ref={scrollRef} className="h-full">
                         <div className="max-w-4xl mx-auto px-4 py-6">
                             {loadingMessages ? (
@@ -594,10 +604,10 @@ const MultiSubjectChatbot = () => {
                     </ScrollArea>
                 </main>
 
-                {/* Input */}
                 <footer className="bg-white border-t border-gray-200 shadow-lg">
                     <div className="max-w-4xl mx-auto px-4 py-4">
                         <div className="flex gap-3 items-end">
+                            {/*Input*/}
                             <div className="flex-1 relative">
                                 <Textarea
                                     ref={textareaRef}
@@ -605,13 +615,50 @@ const MultiSubjectChatbot = () => {
                                     onChange={(e) => setInput(e.target.value)}
                                     onKeyDown={handleKeyDown}
                                     placeholder={`Ask a ${config.name.toLowerCase()} question…`}
-                                    className={`min-h-[52px] max-h-32 resize-none rounded-xl ${config.borderColor} focus:${config.borderColor} pr-12`}
+                                    className={`min-h-[52px] max-h-32 resize-none rounded-xl ${config.borderColor} focus:${config.borderColor} pl-24 pr-4`}
                                     rows={1}
                                     aria-label="Chat input"
                                     disabled={loadingMessages}
                                 />
+
+                                {/* Mode picker */}
+                                <div className="absolute right-2 top-1/2 -translate-y-1/2">
+                                    <DropdownMenu>
+                                        <DropdownMenuTrigger asChild>
+                                            <button
+                                                className="flex items-center gap-1 px-2 py-1 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-all">
+                                                {mode === "answer"
+                                                    ? <Lightbulb className="w-3.5 h-3.5"/>
+                                                    : <BookOpen className="w-3.5 h-3.5"/>
+                                                }
+                                                <span
+                                                    className="text-xs font-medium">{mode === "answer" ? "Answer" : "Reference"}</span>
+                                                <ChevronUp className="w-3 h-3 opacity-50"/>
+                                            </button>
+                                        </DropdownMenuTrigger>
+                                        <DropdownMenuContent side="top" align="start" className="w-56 m-2 mr-5 p-2">
+                                            <DropdownMenuItem onClick={() => setMode("answer")}
+                                                              className="flex items-start gap-2.5 p-2.5 mb-2 cursor-pointer">
+                                                <div>
+                                                    <p className={`text-sm font-medium ${mode === "answer" ? config.textColor : ""}`}>Answer {mode === "answer" && "✓"}</p>
+                                                    <p className="text-xs text-gray-400 leading-snug">Get a
+                                                        detailed explanation from your textbooks</p>
+                                                </div>
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem onClick={() => setMode("reference")}
+                                                              className="flex items-start gap-2.5 p-2.5 cursor-pointer">
+                                                <div>
+                                                    <p className={`text-sm font-medium ${mode === "reference" ? config.textColor : ""}`}>Reference {mode === "reference" && "✓"}</p>
+                                                    <p className="text-xs text-gray-400 leading-snug">Get page
+                                                        numbers and sections to study yourself</p>
+                                                </div>
+                                            </DropdownMenuItem>
+                                        </DropdownMenuContent>
+                                    </DropdownMenu>
+                                </div>
                             </div>
 
+                            {/* Send button */}
                             <Button
                                 onClick={handleSend}
                                 disabled={!input.trim() || isStreaming || loadingMessages}
@@ -620,6 +667,7 @@ const MultiSubjectChatbot = () => {
                             >
                                 <Send className="w-5 h-5"/>
                             </Button>
+
                         </div>
 
                         <p className="text-xs text-gray-500 mt-2 text-center">
@@ -628,6 +676,7 @@ const MultiSubjectChatbot = () => {
                         </p>
                     </div>
                 </footer>
+
             </div>
         </div>
     );
