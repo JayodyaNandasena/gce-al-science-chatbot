@@ -1,0 +1,51 @@
+import { Dna, FlaskConical, Atom } from "lucide-react";
+
+export const QUIZ_SUBJECTS = {
+    biology: {
+        name: "Biology",
+        icon: Dna,
+        gradient: "from-emerald-700 to-teal-600",
+        bgGradient: "from-emerald-50 via-teal-50 to-cyan-50",
+        borderColor: "border-emerald-200",
+        focusBorder: "focus:border-emerald-400",
+        hoverBorder: "hover:border-emerald-400",
+        textColor: "text-emerald-700",
+        badgeBg: "bg-emerald-100",
+        mutedText: "text-emerald-600",
+        progressColor: "bg-emerald-500",
+        activePill: "bg-emerald-700 text-white border-emerald-700",
+        activeDot: "#065f46",
+    },
+    chemistry: {
+        name: "Chemistry",
+        icon: FlaskConical,
+        gradient: "from-violet-800 to-purple-800",
+        bgGradient: "from-violet-50 via-purple-50 to-fuchsia-50",
+        borderColor: "border-violet-200",
+        focusBorder: "focus:border-violet-400",
+        hoverBorder: "hover:border-violet-400",
+        textColor: "text-violet-700",
+        badgeBg: "bg-violet-100",
+        mutedText: "text-violet-600",
+        progressColor: "bg-violet-600",
+        activePill: "bg-violet-700 text-white border-violet-700",
+        activeDot: "#4c1d95",
+    },
+    physics: {
+        name: "Physics",
+        icon: Atom,
+        gradient: "from-blue-800 to-indigo-800",
+        bgGradient: "from-blue-50 via-indigo-50 to-cyan-50",
+        borderColor: "border-blue-200",
+        focusBorder: "focus:border-blue-400",
+        hoverBorder: "hover:border-blue-400",
+        textColor: "text-blue-700",
+        badgeBg: "bg-blue-100",
+        mutedText: "text-blue-600",
+        progressColor: "bg-blue-600",
+        activePill: "bg-blue-700 text-white border-blue-700",
+        activeDot: "#1e3a8a",
+    },
+} as const;
+
+export type QuizSubject = keyof typeof QUIZ_SUBJECTS;

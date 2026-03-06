@@ -1,0 +1,421 @@
+[
+  {
+    "id": "PHYS_3_A",
+    "topics": [
+      "Oscillations and Waves",
+      "Optics & optical instruments"
+    ],
+    "passage": "You are asked to determine the refractive index ($n_l$) of a transparent liquid using the apparent displacement of the image of an object. You are provided with a tall cylinder, sufficient amount of liquid, a travelling microscope, a small pin (O), fine plastic pieces which can float on the liquid and a large syringe.",
+    "diagram_reference": "image_dd38e1.png",
+    "questions": [
+      {
+        "id": "PHYS_3_a",
+        "question": "Write down an expression for the apparent displacement ($d$) produced by a transparent block made of material of refractive index ($n$) and thickness ($h$) placed in air when an object ($O$) is placed at the opposite side of the block as shown in the figure (1).",
+        "diagram_reference": "image_dd38e1.png",
+        "total_marks": 2,
+        "marking_points": [
+          {
+            "point": "Expression: $d = h(1 - \\frac{1}{n})$",
+            "marks": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PHYS_3_B",
+    "topics": [
+      "Oscillations and Waves",
+      "Optics & optical instruments"
+    ],
+    "passage": "As in figure (2) the small pin $O$ is placed at the bottom of the empty cylinder. The travelling microscope is focused from above to view a clear image of $O$ and the reading is taken (say $x$). Then the liquid is poured up to a certain height ($h$).",
+    "diagram_reference": "image_dd38e1.png",
+    "questions": [
+      {
+        "id": "PHYS_3_b_i",
+        "question": "What you should do to the travelling microscope to see a clear image of the pin again? Let the microscope reading be ($y$) in this situation.",
+        "total_marks": 2,
+        "marking_points": [
+          {
+            "point": "Move the travelling microscope upward (until a clear image of $O$ is seen)",
+            "marks": 2
+          }
+        ]
+      },
+      {
+        "id": "PHYS_3_b_ii",
+        "question": "Write down the experimental steps that you follow to measure the height ($h$) of the liquid column. (Let the reading be $z$.)",
+        "total_marks": 2,
+        "marking_points": [
+          {
+            "point": "Float few fine plastic pieces/powder on liquid",
+            "marks": 1
+          },
+          {
+            "point": "Move the microscope (further) upward until a clear image of plastic pieces/powder are seen. (Take reading $z$)",
+            "marks": 1
+          }
+        ]
+      },
+      {
+        "id": "PHYS_3_b_iii",
+        "question": "Write down expressions for height ($h$) of the liquid column and the apparent displacement ($d$) of the image using the readings $x$, $y$ and $z$.",
+        "total_marks": 2,
+        "marking_points": [
+          {
+            "point": "$h = z - x$",
+            "marks": 1
+          },
+          {
+            "point": "$d = y - x$",
+            "marks": 1
+          },
+          {
+            "point": "Note: Award full marks if $h = x - z$ and $d = x - y$ are written; But only 01 mark if answers are mixed",
+            "marks": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PHYS_4_AB",
+    "topics": [
+      "Current electricity",
+      "Electromotive force & circuits"
+    ],
+    "passage": "Figure (1) shows a part of an experimental set up to determine the resistivity ($\\rho$) of material of a given wire with the aid of a metre bridge. The resistance value of the resistance box is $R$ and the resistance of the given wire is $S$. The length of the metre bridge wire $AB$ is $100$ cm.",
+    "diagram_reference": "image_dc4c83.png",
+    "questions": [
+      {
+        "id": "PHYS_4_a_i",
+        "question": "A centre-zero galvanometer has to be connected between points $C$ and $D$. To protect the centre-zero galvanometer the circuit in figure (2) can be used. (i) Name the type of key $K_2$ :",
+        "diagram_reference": "image_dc4c84.png",
+        "total_marks": 1,
+        "marking_points": [
+          {
+            "point": "Plug key",
+            "marks": 1
+          }
+        ]
+      },
+      {
+        "id": "PHYS_4_a_ii",
+        "question": "Select the suitable value for the resistance $X$ from resistances $1\\ \\Omega, 10\\ \\Omega, 100\\ \\Omega,$ and $1000\\ \\Omega$.",
+        "total_marks": 1,
+        "marking_points": [
+          {
+            "point": "The value of $X$ : $1000\\ \\Omega$",
+            "marks": 1
+          }
+        ]
+      },
+      {
+        "id": "PHYS_4_b",
+        "question": "(b) Before taking measurements how do you check whether the circuit is connected properly?",
+        "total_marks": 2,
+        "marking_points": [
+          {
+            "point": "Open $K_2$ (and close key $K_1$)",
+            "marks": 1
+          },
+          {
+            "point": "Touch the sliding key with both ends of the wire and check whether the deflections of the galvanometer are in opposite directions",
+            "marks": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PHYS_4_CDE",
+    "topics": [
+      "Current electricity",
+      "Electric current, energy & power"
+    ],
+    "passage": "When the resistance value of resistance box is $R$, the balance length of the metre bridge wire is $l$ (in cm).",
+    "diagram_reference": "image_dc4c83.png",
+    "questions": [
+      {
+        "id": "PHYS_4_c",
+        "question": "Write down an expression for $\\frac{R}{S}$ in terms of $l$. Neglect the end corrections of the metre bridge wire.",
+        "total_marks": 2,
+        "marking_points": [
+          {
+            "point": "$\\frac{R}{S} = \\frac{l}{100-l}$",
+            "marks": 2
+          }
+        ]
+      },
+      {
+        "id": "PHYS_4_d",
+        "question": "For $R = 9\\ \\Omega, 26\\ \\Omega$ and $56\\ \\Omega$ the balance lengths are $27.0$ cm, $52.0$ cm and $70.0$ cm respectively at $30\\degree$C. (i) What is the most appropriate value of resistance $R$ that must be used in order to determine the value of $S$ accurately? Give the reason. (ii) Calculate the most accurate value of $S$ using the relevant balance length and $R$.",
+        "total_marks": 3,
+        "marking_points": [
+          {
+            "point": "Value : $26\\ \\Omega$",
+            "marks": 1
+          },
+          {
+            "point": "Reason : Then balance point is in the middle of the wire which minimizes the fractional/percentage/end error of length measurements.",
+            "marks": 1
+          },
+          {
+            "point": "Calculation: $\\frac{26}{S} = \\frac{52}{100-52} \\Rightarrow S = 24\\ \\Omega$",
+            "marks": 1
+          }
+        ]
+      },
+      {
+        "id": "PHYS_4_e",
+        "question": "The values of diameter measured in four different places in the given wire are $0.39$ mm, $0.40$ mm, $0.40$ mm and $0.41$ mm, and the length of the wire is $48.0$ cm. Calculate the resistivity of the material of the wire. (Take $\\pi = 3$.)",
+        "total_marks": 4,
+        "marking_points": [
+          {
+            "point": "$S = \\frac{\\rho l}{A}$ OR $\\rho = \\frac{SA}{l}$ OR $\\rho = \\frac{S \\times \\pi (\\frac{d}{2})^2}{l}$",
+            "marks": 1
+          },
+          {
+            "point": "Average of $d = (0.39 + 0.40 + 0.40 + 0.41)/4 = 0.40$ mm",
+            "marks": 1
+          },
+          {
+            "point": "$\\rho = \\frac{24 \\times 3 \\times (\\frac{4.0 \\times 10^{-4}}{2})^2}{48 \\times 10^{-2}}$ (for substitution)",
+            "marks": 1
+          },
+          {
+            "point": "$\\rho = 6.0 \\times 10^{-6}\\ \\Omega$ m",
+            "marks": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PHYS_4_FG",
+    "topics": [
+      "Current electricity",
+      "Electronics"
+    ],
+    "passage": "Calculations regarding temperature coefficient of resistance based on wire properties at different temperatures.",
+    "diagram_reference": "image_dc4c83.png",
+    "questions": [
+      {
+        "id": "PHYS_4_f",
+        "question": "When the above wire is kept at constant temperature of $100\\degree$C in an oil bath, for $R = 20\\ \\Omega$ in the resistance box the balance length is $40.0$ cm. Calculate the temperature coefficient of resistance of the material of the wire.",
+        "total_marks": 3,
+        "marking_points": [
+          {
+            "point": "At $100\\degree$C, $S = \\frac{20.0 \\times 60.0}{40.0} = 30\\ \\Omega$",
+            "marks": 1
+          },
+          {
+            "point": "$30 = S_0(1 + \\alpha \\times 100)$ and $24.3 = S_0(1 + \\alpha \\times 30)$ (or equivalent ratio)",
+            "marks": 1
+          },
+          {
+            "point": "$\\alpha = 3.7 \\times 10^{-3}\\ \\degree$C$^{-1}$",
+            "marks": 1
+          }
+        ]
+      },
+      {
+        "id": "PHYS_4_g",
+        "question": "For a certain type of material the temperature coefficient of resistance is negative around room temperature. Name the type of material.",
+        "total_marks": 2,
+        "marking_points": [
+          {
+            "point": "Semiconductor material",
+            "marks": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PHYS_5_ABC",
+    "topics": [
+      "Mechanics",
+      "Fluid statics and dynamics"
+    ],
+    "passage": "A pile driver system is shown in figure (1). The steel arm of mass 2000 kg pivoted at point A is shown in figure (2) with its dimensions. The centre of gravity of the arm is located at G. A pulley of mass 200 kg is attached at the upper end (B) of the arm and it can be rotated by an electric motor. A cable is wound around the pulley and its free end is connected to a steel cylinder of mass 800 kg. Neglect the mass of the cable. The lengths AB and AC are 10 m and 2 m respectively. The horizontal distance from point A to the line of action of the weight of the steel arm is 2 m. The arm is operated using a hydraulic system.",
+    "diagram_reference": "image_991587.png",
+    "questions": [
+      {
+        "id": "PHYS_5_a",
+        "question": "To keep the arm and its attachments at equilibrium position a force $F_1$ has to be applied at point C using the hydraulic system as shown in figure (2). The direction of $F_1$ is perpendicular to the length AC. Calculate the value of this force $F_1$ by taking moments about point A. For this calculation neglect the size of the pulley.",
+        "total_marks": 2,
+        "marking_points": [
+          {
+            "point": "Taking moments about A: $F_1 \\times 2 = 2 \\times 2000 \\times 10 + 10 \\sin 30^\\circ \\times (200 + 800) \\times 10$",
+            "marks": 1
+          },
+          {
+            "point": "$F_1 = 45,000$ N (or 45 kN)",
+            "marks": 1
+          }
+        ]
+      },
+      {
+        "id": "PHYS_5_b",
+        "question": "The force $F_1$ in (a) above is provided by compressed oil of a hydraulic pump as shown in figure (3). The cross-sectional area of the piston of the master pump is 4 cm$^2$ and the cross-sectional area of the piston at point C is 60 cm$^2$. A force $F_2$ has to be applied to the piston of the master pump in order to obtain the force $F_1$.",
+        "sub_questions": [
+          {
+            "id": "PHYS_5_b_i",
+            "question": "Name the principle that must be used to calculate force $F_2$.",
+            "total_marks": 1,
+            "marking_points": [
+              {
+                "point": "Pascal's principle",
+                "marks": 1
+              }
+            ]
+          },
+          {
+            "id": "PHYS_5_b_ii",
+            "question": "Find the value of $F_2$.",
+            "total_marks": 2,
+            "marking_points": [
+              {
+                "point": "Substitution: $\\frac{45000}{60} = \\frac{F_2}{4}$",
+                "marks": 1
+              },
+              {
+                "point": "$F_2 = 3,000$ N",
+                "marks": 1
+              }
+            ]
+          },
+          {
+            "id": "PHYS_5_b_iii",
+            "question": "What is the pressure of the compressed oil in the hydraulic pump?",
+            "total_marks": 2,
+            "marking_points": [
+              {
+                "point": "$P = \\frac{3000}{4 \\times 10^{-4}}$",
+                "marks": 1
+              },
+              {
+                "point": "$P = 7.5 \\times 10^6$ Pa (or N m$^{-2}$)",
+                "marks": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PHYS_5_C_cont",
+    "topics": [
+      "Mechanics",
+      "Rotational motion & circular motion"
+    ],
+    "passage": "The radius of the pulley is 10 cm. The moment of inertia $I$ of a pulley of mass $M$ and radius $r$ about its axis of rotation can be given by $I = \\frac{1}{2}Mr^2$. The cable moves without slipping.",
+    "diagram_reference": "image_991587.png",
+    "questions": [
+      {
+        "id": "PHYS_5_c_i",
+        "question": "When the arm is at its maximum vertical position as shown in figure (2) the steel cylinder is moved upward at a constant linear acceleration of 0.5 m s$^{-2}$ by rotating the pulley. Calculate the torque that must be applied to the pulley by the motor in order to raise the cylinder.",
+        "total_marks": 6,
+        "marking_points": [
+          {
+            "point": "Calculation of $I = \\frac{1}{2} \\times 200 \\times 0.1^2 = 1$ kg m$^2$",
+            "marks": 1
+          },
+          {
+            "point": "Upward motion ($F=ma$): $T - 8000 = 0.5 \\times 800 \\Rightarrow T = 8,400$ N",
+            "marks": 2
+          },
+          {
+            "point": "Rotational motion ($\\tau = I\\alpha$): $\\tau - 8400 \\times 0.1 = 1 \\times \\frac{0.5}{0.1}$",
+            "marks": 2
+          },
+          {
+            "point": "Final Answer: $\\tau = 845$ N m",
+            "marks": 1
+          }
+        ]
+      },
+      {
+        "id": "PHYS_5_c_ii",
+        "question": "When the cylinder has moved upward to a certain height the motor is switched off and the cylinder comes to a momentarily stop... Calculate the velocity of the cylinder just before hitting the pile.",
+        "total_marks": 3,
+        "marking_points": [
+          {
+            "point": "Energy conservation: $\\frac{1}{2}mv^2 + \\frac{1}{2}I\\omega^2 = mgh$",
+            "marks": 1
+          },
+          {
+            "point": "Substitution: $\\frac{1}{2} \\times 800 \\times v^2 + \\frac{1}{2} \\times 1 \\times \\frac{v^2}{0.1^2} = 800 \\times 10 \\times \\frac{45}{8}$",
+            "marks": 1
+          },
+          {
+            "point": "$v = 10$ m s$^{-1}$",
+            "marks": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PHYS_5_C_impact",
+    "topics": [
+      "Mechanics",
+      "Work, energy & power"
+    ],
+    "passage": "After the collision, the cylinder and the pile penetrate as a composite object into the soil without any recoil.",
+    "diagram_reference": "image_991587.png",
+    "questions": [
+      {
+        "id": "PHYS_5_c_iii",
+        "question": "What type of collision is this? How do you identify this type of collision in terms of loss of kinetic energy?",
+        "total_marks": 2,
+        "marking_points": [
+          {
+            "point": "Perfectly inelastic collision",
+            "marks": 1
+          },
+          {
+            "point": "The kinetic energy loss is maximum",
+            "marks": 1
+          }
+        ]
+      },
+      {
+        "id": "PHYS_5_c_iv",
+        "question": "Calculate the velocity of the cylinder and the pile just after the collision. The mass of the pile is 480 kg.",
+        "total_marks": 2,
+        "marking_points": [
+          {
+            "point": "Conservation of linear momentum: $800 \\times 10 = (800 + 480) \\times v_1$",
+            "marks": 1
+          },
+          {
+            "point": "$v_1 = 6.25$ m s$^{-1}$",
+            "marks": 1
+          }
+        ]
+      },
+      {
+        "id": "PHYS_5_c_v",
+        "question": "If the distance penetrated by the pile in one hit is 20 cm, calculate the average value of the resistance force produced by soil against penetration. [Take $(6.25)^2 = 39$]",
+        "total_marks": 3,
+        "marking_points": [
+          {
+            "point": "Energy Equation: $\\frac{1}{2} \\times 1280 \\times (6.25)^2 = F \\times 0.2$",
+            "marks": 1
+          },
+          {
+            "point": "Including potential energy: $\\frac{1}{2} \\times 1280 \\times (6.25)^2 + 1280 \\times 10 \\times 0.2 = F \\times 0.2$",
+            "marks": 1
+          },
+          {
+            "point": "Result: $F = 1.38 \\times 10^5$ N",
+            "marks": 1
+          }
+        ]
+      }
+    ]
+  }
+]

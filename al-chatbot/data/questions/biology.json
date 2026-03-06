@@ -1,0 +1,2442 @@
+[
+  {
+    "id": "BIO_1A_i_a",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Biological molecules & water"
+    ],
+    "question": "State the function of serum albumin.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Transport of fatty acids",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1A_i_b",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Biological molecules & water"
+    ],
+    "question": "State the function of ovalbumin.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Storage protein in eggs",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1A_ii_a",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Biological molecules & water"
+    ],
+    "question": "Why are amino acids considered amphoteric molecules?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Contain both an alkaline amino group and an acidic carboxyl group in the same molecule",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1A_ii_b",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Biological molecules & water"
+    ],
+    "question": "State two differences between animal fats and plant fats.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Animal fats are saturated / lack double bonds while plant fats are unsaturated / contain double bonds",
+        "marks": 1
+      },
+      {
+        "point": "Animal fats are solid at room temperature while plant fats are liquid at room temperature",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1A_iii_a",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Cell structure & microscopy"
+    ],
+    "question": "Name a protein with alpha helix structure that is a component of intermediate filaments in animals.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Keratin",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1A_iii_b",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Cell structure & microscopy"
+    ],
+    "question": "Name a compound present in the cell walls of bacteria and cyanobacteria but not in archaebacteria.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Peptidoglycan",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1A_iv_a",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Cell structure & microscopy"
+    ],
+    "question": "What acts as the object for the eyepiece lens in a compound light microscope?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "The magnified image formed by the objective lens",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1A_iv_b",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Cell structure & microscopy"
+    ],
+    "question": "What is used to stain specimens for transmission electron microscopy?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Heavy metals",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1A_v_a",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Cell structure & microscopy"
+    ],
+    "question": "State two functions carried out by both rough and smooth endoplasmic reticulum.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Synthesis of phospholipids",
+        "marks": 1
+      },
+      {
+        "point": "Production of transport vesicles",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1A_v_b",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Cell structure & microscopy"
+    ],
+    "question": "State two functions carried out only by smooth endoplasmic reticulum.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Detoxification",
+        "marks": 1
+      },
+      {
+        "point": "Synthesis of oils or steroids",
+        "marks": 1
+      },
+      {
+        "point": "Storage of calcium ions",
+        "marks": 1
+      },
+      {
+        "point": "Metabolism of carbohydrates",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1B_i",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Cell structure & microscopy"
+    ],
+    "question": "Name the most abundant glycoprotein in the extracellular matrix of animal cells.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Collagen",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1B_ii_a",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Cell structure & microscopy"
+    ],
+    "question": "Name the subcellular component responsible for transporting residue material out of the cell.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Lysosomes",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1B_ii_b",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Cell structure & microscopy"
+    ],
+    "question": "Name the subcellular component responsible for cytoplasmic streaming.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Cytoskeleton",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1B_iii",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Cell cycle & cell division"
+    ],
+    "question": "During which phase of mitosis are chromosomes located at the equator of the cell?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Metaphase",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1B_iv",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Cell cycle & cell division"
+    ],
+    "question": "Name two human cell types that remain in the G0 phase.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Nerve cells",
+        "marks": 1
+      },
+      {
+        "point": "Muscle cells",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1C_i_a",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Enzymes & metabolism"
+    ],
+    "question": "State what is meant by cofactors of enzymes.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Non-protein substances required for enzyme catalytic activity",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1C_i_b",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Enzymes & metabolism"
+    ],
+    "question": "Name two inorganic enzyme cofactors.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Zinc ions",
+        "marks": 1
+      },
+      {
+        "point": "Iron ions",
+        "marks": 1
+      },
+      {
+        "point": "Copper ions",
+        "marks": 1
+      },
+      {
+        "point": "Potassium ions",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_i",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Biological classification"
+    ],
+    "question": "State five features of organisms of domain Eukarya that are common to all or some organisms of domain Archaea.",
+    "total_marks": 5,
+    "marking_points": [
+      {
+        "point": "Presence of histones associated with DNA",
+        "marks": 1
+      },
+      {
+        "point": "Presence of introns in genes",
+        "marks": 1
+      },
+      {
+        "point": "Initiator amino acid in protein synthesis is methionine",
+        "marks": 1
+      },
+      {
+        "point": "Presence of several kinds of RNA polymerases",
+        "marks": 1
+      },
+      {
+        "point": "Growth not inhibited by antibiotics such as streptomycin or chloramphenicol",
+        "marks": 1
+      },
+      {
+        "point": "Unbranched hydrocarbons in membrane lipids",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_ii",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Diversity of microorganisms"
+    ],
+    "question": "State three substances other than cellulose present in the cell walls of some protists and name an organism or group that contains each substance.",
+    "total_marks": 6,
+    "marking_points": [
+      {
+        "point": "Alginic acid present in Sargassum",
+        "marks": 2
+      },
+      {
+        "point": "Pectin present in diatoms",
+        "marks": 2
+      },
+      {
+        "point": "Silica present in diatoms",
+        "marks": 2
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_iii",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Diversity of plants"
+    ],
+    "question": "What are the structures that form the ovule of seed plants?",
+    "total_marks": 3,
+    "marking_points": [
+      {
+        "point": "Megaspore",
+        "marks": 1
+      },
+      {
+        "point": "Megasporangium",
+        "marks": 1
+      },
+      {
+        "point": "Integument",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_iv",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Diversity of animals"
+    ],
+    "question": "State five characteristic features of phylum Nematoda observable externally in Ascaris.",
+    "total_marks": 5,
+    "marking_points": [
+      {
+        "point": "Cylindrical body with tapering ends",
+        "marks": 1
+      },
+      {
+        "point": "Presence of sensory papillae at anterior end",
+        "marks": 1
+      },
+      {
+        "point": "Unsegmented body",
+        "marks": 1
+      },
+      {
+        "point": "Presence of excretory pores in body wall",
+        "marks": 1
+      },
+      {
+        "point": "No special locomotory structures",
+        "marks": 1
+      },
+      {
+        "point": "Bilateral symmetry",
+        "marks": 1
+      },
+      {
+        "point": "No distinct cephalization",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_i",
+    "topics": [
+      "Plant form and function",
+      "Plant structure & tissues"
+    ],
+    "question": "State two functions of hair-like trichomes.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Reduce water loss",
+        "marks": 1
+      },
+      {
+        "point": "Reflect excess light",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_ii",
+    "topics": [
+      "Plant form and function",
+      "Transport & water relations"
+    ],
+    "question": "What forms the symplastic route of radial transport in plants?",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Cytosol",
+        "marks": 1
+      },
+      {
+        "point": "Plasmodesmata",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_iii",
+    "topics": [
+      "Plant form and function",
+      "Plant nutrition & metabolism"
+    ],
+    "question": "What is the form of intake of sulphur into plants?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Sulphate ions (SO₄²⁻)",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_iv",
+    "topics": [
+      "Plant form and function",
+      "Plant reproduction & responses"
+    ],
+    "question": "Why do land plants carry out internal fertilization?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "To prevent desiccation of gametes",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_v",
+    "topics": [
+      "Plant form and function",
+      "Plant growth & development"
+    ],
+    "question": "What are statoliths that help vascular plants detect gravity?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Specialized plastids containing dense starch grains",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_i_a",
+    "topics": [
+      "Animal form and function",
+      "Circulation & gas exchange"
+    ],
+    "question": "Why are respiratory structures needed for animals?",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Body surface gas exchange becomes inadequate as body size and complexity increase",
+        "marks": 2
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_i_b",
+    "topics": [
+      "Animal form and function",
+      "Circulation & gas exchange"
+    ],
+    "question": "State the difference between vital capacity and total lung capacity in humans.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Vital capacity is the maximum volume inhaled and exhaled, whereas total lung capacity is the maximum volume lungs can hold",
+        "marks": 2
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_ii_a",
+    "topics": [
+      "Animal form and function",
+      "Excretion & homeostasis"
+    ],
+    "question": "State the advantage of excreting nitrogenous waste as ammonia for aquatic invertebrates.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Low energy cost of production",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_ii_b",
+    "topics": [
+      "Animal form and function",
+      "Excretion & homeostasis"
+    ],
+    "question": "What is the process by which most water is reabsorbed in human nephrons?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Osmosis",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_ii_c",
+    "topics": [
+      "Animal form and function",
+      "Excretion & homeostasis"
+    ],
+    "question": "State the location at which nephridia of annelids open internally.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Coelom",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4-A-i-a-Y",
+    "topics": [
+      "Molecular Biology and Recombinant DNA Technology",
+      "Mutations"
+    ],
+    "question": "Name the type of point mutation shown in diagram Y.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Missense mutation",
+        "marks": 1
+      }
+    ],
+    "diagram_reference": "Q4-A-i-a-Y.png"
+  },
+  {
+    "id": "Q4-A-i-a-Z",
+    "topics": [
+      "Molecular Biology and Recombinant DNA Technology",
+      "Mutations"
+    ],
+    "question": "Name the type of point mutation shown in diagram Z.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Silent mutation",
+        "marks": 1
+      }
+    ],
+    "diagram_reference": "Q4-A-i-a-Y.png"
+  },
+  {
+    "id": "Q4-A-i-b",
+    "topics": [
+      "Molecular Biology and Recombinant DNA Technology",
+      "Gene expression"
+    ],
+    "question": "Write the mRNA nucleotide sequence corresponding to the given DNA coding strand.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "CGUUUUUUACCUAUA",
+        "marks": 2
+      }
+    ]
+  },
+  {
+    "id": "Q4-A-ii-a",
+    "topics": [
+      "Molecular Biology and Recombinant DNA Technology",
+      "Genetic engineering & DNA analysis"
+    ],
+    "question": "What is meant by a vector in gene technology?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Vehicle that carries DNA into a host cell",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4-A-ii-b",
+    "topics": [
+      "Molecular Biology and Recombinant DNA Technology",
+      "Genetic engineering & DNA analysis"
+    ],
+    "question": "Give two examples of cloning vectors.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Plasmid",
+        "marks": 1
+      },
+      {
+        "point": "Bacteriophage",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4-B-i-a",
+    "topics": [
+      "Microbiology",
+      ""
+    ],
+    "question": "Name the physical method used to sterilize hospital waste.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Incineration",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4-B-ii",
+    "topics": [
+      "Microbiology",
+      ""
+    ],
+    "question": "Name a chemoautotrophic bacterial genus that oxidizes NO2− to NO3− in soil.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Nitrobacter",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4-C-ii-a",
+    "topics": [
+      "Molecular Biology and Recombinant DNA Technology",
+      "Applications of biotechnology"
+    ],
+    "question": "Name two species of genetically modified microorganisms used to produce human insulin.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Escherichia coli",
+        "marks": 1
+      },
+      {
+        "point": "Saccharomyces cerevisiae",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4-C-iv-b",
+    "topics": [
+      "Microbiology",
+      ""
+    ],
+    "question": "How does Aspergillus flavus cause food intoxication in humans?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "By producing aflatoxins",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "Q4-C-v",
+    "topics": [
+      "Applied biology",
+      ""
+    ],
+    "question": "State two uses of nano device sensors in nanomedicine.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Monitoring blood pressure",
+        "marks": 1
+      },
+      {
+        "point": "Monitoring blood oxygen or hormone levels",
+        "marks": 1
+      },
+      {
+        "point": "To monitor hormone concentrations",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1D_i",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Origin of life & evolution"
+    ],
+    "question": "About how many years ago did life originate on earth?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "About 3.5 billion years ago / 3.5 × 10^9 years",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1D_ii_a",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Enzymes & metabolism"
+    ],
+    "question": "What is meant by metabolism?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Sum of all chemical activities / anabolic and catabolic reactions occurring in an organism",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1D_ii_b",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Biological molecules & water"
+    ],
+    "question": "What is meant by growth?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Irreversible increase in dry mass or weight of an organism",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1D_ii_c",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Biological molecules & water"
+    ],
+    "question": "What is meant by development?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Irreversible changes that occur during the life span of an organism",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1D_iii_a",
+    "topics": [
+      "Applied biology",
+      "Sustainable food production"
+    ],
+    "question": "State the three main methods by which food production can be sustainably maintained.",
+    "total_marks": 3,
+    "marking_points": [
+      {
+        "point": "Production of high yielding varieties of plants and animals",
+        "marks": 1
+      },
+      {
+        "point": "Production of disease resistant varieties of plants and animals",
+        "marks": 1
+      },
+      {
+        "point": "Improving postharvest technologies or methods",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1D_iii_b",
+    "topics": [
+      "Applied biology",
+      "Sustainable food production"
+    ],
+    "question": "What mainly contributes to the overuse of natural resources of earth?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Increase in human population growth rate",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1D_iv",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Origin of life & evolution"
+    ],
+    "question": "In which geological eon did the concentration of oxygen in the earth’s atmosphere start to increase?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Archaean",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1D_v_a",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Origin of life & evolution"
+    ],
+    "question": "In which era did colonization of land by plants occur?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Paleozoic",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1D_v_b",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Origin of life & evolution"
+    ],
+    "question": "In which era did gymnosperms dominate?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Mesozoic",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1D_v_c",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Origin of life & evolution"
+    ],
+    "question": "In which era did the first seed plants appear?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Paleozoic",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1E_i",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Biological classification"
+    ],
+    "question": "What is meant by classification of organisms?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Arrangement of organisms into groups based on common characteristics",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1E_ii",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Biological classification"
+    ],
+    "question": "What are the important criteria used in modern systematics?",
+    "total_marks": 6,
+    "marking_points": [
+      {
+        "point": "Sequence of bases in important genes",
+        "marks": 1
+      },
+      {
+        "point": "Sequence of bases in mitochondrial DNA",
+        "marks": 1
+      },
+      {
+        "point": "Sequence of bases in chloroplast DNA",
+        "marks": 1
+      },
+      {
+        "point": "Sequence of bases in ribosomal RNA",
+        "marks": 1
+      },
+      {
+        "point": "Sequences of amino acids in common proteins",
+        "marks": 1
+      },
+      {
+        "point": "Molecular structure of cellular components",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1E_iii",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Diversity of animals"
+    ],
+    "question": "State four structural features that can be seen only in arthropods.",
+    "total_marks": 4,
+    "marking_points": [
+      {
+        "point": "Chitinous exoskeleton",
+        "marks": 1
+      },
+      {
+        "point": "Jointed legs",
+        "marks": 1
+      },
+      {
+        "point": "Malpighian tubules",
+        "marks": 1
+      },
+      {
+        "point": "Book lungs or tracheal system",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1E_iv",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Diversity of animals"
+    ],
+    "question": "State three structural features unique to class Mammalia.",
+    "total_marks": 3,
+    "marking_points": [
+      {
+        "point": "Differentiated teeth",
+        "marks": 1
+      },
+      {
+        "point": "Hair",
+        "marks": 1
+      },
+      {
+        "point": "Muscular diaphragm",
+        "marks": 1
+      },
+      {
+        "point": "Mammary glands",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1E_v",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Diversity of animals"
+    ],
+    "question": "What is the main physiological feature common to birds and mammals?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Endothermy",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1F_i_a",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Diversity of plants"
+    ],
+    "question": "State the phylum of seedless plants that has a more recent common ancestor with seed plants.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Pterophyta",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1F_i_b",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Diversity of plants"
+    ],
+    "question": "Name a genus that belongs to this phylum.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Nephrolepis",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1F_ii",
+    "topics": [
+      "Plant form and function",
+      "Plant structure & tissues"
+    ],
+    "question": "State two features of microphylls that distinguish them from megaphylls.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Single veined",
+        "marks": 1
+      },
+      {
+        "point": "Smaller in size",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1F_iii",
+    "topics": [
+      "Plant form and function",
+      "Plant structure & tissues"
+    ],
+    "question": "State a structure common to sporophytes of bryophytes and angiosperms other than subcellular components, cells, stems and leaves.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Stomata",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1F_iv",
+    "topics": [
+      "Plant form and function",
+      "Plant structure & tissues"
+    ],
+    "question": "What is the structural feature used to divide plants into two major groups?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Presence of vascular tissue",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1F_v_a",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Biological classification"
+    ],
+    "question": "State the cell wall composition of organisms belonging to domain Bacteria.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Peptidoglycan",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1F_v_b",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Biological classification"
+    ],
+    "question": "State the cell wall composition of organisms belonging to domain Archaea.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Proteins",
+        "marks": 1
+      },
+      {
+        "point": "Polysaccharides",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_1F_v_c",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Biological classification"
+    ],
+    "question": "State the cell wall composition of organisms belonging to domain Eukarya.",
+    "total_marks": 4,
+    "marking_points": [
+      {
+        "point": "Cellulose",
+        "marks": 1
+      },
+      {
+        "point": "Hemicellulose",
+        "marks": 1
+      },
+      {
+        "point": "Pectin",
+        "marks": 1
+      },
+      {
+        "point": "Chitin",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_i_a",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Biological molecules & water"
+    ],
+    "question": "What property of water helps transport dissolved minerals through vascular tissues in plants?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Cohesion of water molecules due to hydrogen bonding",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_i_b",
+    "topics": [
+      "Animal form and function",
+      "Immune system"
+    ],
+    "question": "Name a protein that has a defensive role in humans.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Immunoglobulin",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_i_c",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Biological molecules & water"
+    ],
+    "question": "Name the monomer of a polysaccharide component of fungal cell walls.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Glucosamine",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_ii",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Cell cycle & cell division"
+    ],
+    "question": "State an event that occurs in mitosis and meiosis II but not in meiosis I.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Separation of chromatids",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_iii_a",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Photosynthesis & cellular respiration"
+    ],
+    "question": "Where is CO2 first fixed in C4 plants?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Mesophyll cells",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_iii_b",
+    "topics": [
+      "Chemical and cellular basis of life",
+      "Photosynthesis & cellular respiration"
+    ],
+    "question": "Give two reasons why PEP carboxylase in C4 photosynthesis is more efficient than RuBP carboxylase in C3 photosynthesis.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Higher affinity for HCO3−",
+        "marks": 1
+      },
+      {
+        "point": "No affinity for oxygen / no photorespiration",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_iv_a",
+    "topics": [
+      "Plant form and function",
+      "Plant growth & development"
+    ],
+    "question": "What is meant by secondary growth in plants?",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Increase in diameter of stems and roots due to activity of vascular cambium and cork cambium",
+        "marks": 2
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_iv_b",
+    "topics": [
+      "Plant form and function",
+      "Plant reproduction & responses"
+    ],
+    "question": "State two factors responsible for opening of stomata other than light.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Internal clock in guard cells",
+        "marks": 1
+      },
+      {
+        "point": "Decrease in CO2 concentration in substomatal cavity",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_iv_c",
+    "topics": [
+      "Plant form and function",
+      "Plant nutrition & metabolism"
+    ],
+    "question": "What is the special feature of soil in which Nepenthes grows?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Soil poor in nitrogen and minerals",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_v_a",
+    "topics": [
+      "Plant form and function",
+      "Sexual reproduction in flowering plants"
+    ],
+    "question": "What happens to the triploid nucleus formed after double fertilization in angiosperms?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Develops into the endosperm that stores food",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2A_v_b",
+    "topics": [
+      "Plant form and function",
+      "Plant responses and plant hormones"
+    ],
+    "question": "State the specific location of statoliths in plants.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Within specialized cells in the root cap",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_i_a",
+    "topics": [
+      "Animal form and function",
+      "Animal tissues"
+    ],
+    "question": "State the protein-carbohydrate complex found in the matrix of cartilage tissue and name the type of cells that secrete it.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Protein-carbohydrate complex: Chondroitin sulfate",
+        "marks": 1
+      },
+      {
+        "point": "Cells that secrete it: Chondrocytes",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_i_b",
+    "topics": [
+      "Animal form and function",
+      "Animal tissues"
+    ],
+    "question": "State a major function of cartilage tissue other than providing support.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Provides flexibility",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_ii_a",
+    "topics": [
+      "Animal form and function",
+      "Human nutrition"
+    ],
+    "question": "What is meant by protein sparing?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Not using protein as an energy source when adequate carbohydrates are present in the diet",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_ii_b",
+    "topics": [
+      "Animal form and function",
+      "Human nutrition"
+    ],
+    "question": "What are non-essential fatty acids?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Fatty acids that can be synthesized within the body",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_ii_c",
+    "topics": [
+      "Animal form and function",
+      "Human nutrition"
+    ],
+    "question": "What is meant by a balanced diet?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "A diet containing all essential nutrients in appropriate proportions",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_iii",
+    "topics": [
+      "Animal form and function",
+      "Human nutrition"
+    ],
+    "question": "Name two nonessential amino acids.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Alanine",
+        "marks": 1
+      },
+      {
+        "point": "Cysteine",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_iv_a",
+    "topics": [
+      "Animal form and function",
+      "Transport in animals"
+    ],
+    "question": "What is the normal blood pH in a healthy adult person?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "7.4",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_iv_b",
+    "topics": [
+      "Animal form and function",
+      "Transport in animals"
+    ],
+    "question": "What is the life span of erythrocytes in a healthy adult person?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "120 days",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_iv_c",
+    "topics": [
+      "Animal form and function",
+      "Transport in animals"
+    ],
+    "question": "What is the normal resting blood pressure in a healthy adult person?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "120/80 mm Hg",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_v_a",
+    "topics": [
+      "Animal form and function",
+      "Transport in animals"
+    ],
+    "question": "What is meant by cardiac cycle?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Sequence of events occurring in one complete heartbeat",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2B_v_b",
+    "topics": [
+      "Animal form and function",
+      "Transport in animals"
+    ],
+    "question": "What is hypertension?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Sustained elevation of blood pressure above normal limits",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2C_i_a",
+    "topics": [
+      "Animal form and function",
+      "Gas exchange in animals"
+    ],
+    "question": "What is anatomical dead space?",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Volume of air present in conducting tubes such as trachea, bronchi and bronchioles",
+        "marks": 1
+      },
+      {
+        "point": "Air that does not participate in gas exchange in the alveoli",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2C_i_b",
+    "topics": [
+      "Animal form and function",
+      "Gas exchange in animals"
+    ],
+    "question": "What is the volume of the anatomical dead space of a normal healthy adult person?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "150 mL / 1.5 dL / 150 cm3",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2C_ii",
+    "topics": [
+      "Animal form and function",
+      "Coordination and control in animals"
+    ],
+    "question": "State how coordination through the nervous system is faster compared with coordination through the endocrine system.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Nervous system uses electrical signals that travel rapidly through interconnected neurons",
+        "marks": 1
+      },
+      {
+        "point": "Endocrine system uses hormones transported through blood which takes longer",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2C_iii_a",
+    "topics": [
+      "Animal form and function",
+      "Coordination and control in animals"
+    ],
+    "question": "Name the three major functional areas of the cerebral cortex in humans.",
+    "total_marks": 3,
+    "marking_points": [
+      {
+        "point": "Sensory areas",
+        "marks": 1
+      },
+      {
+        "point": "Association areas",
+        "marks": 1
+      },
+      {
+        "point": "Motor areas",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2C_iii_b",
+    "topics": [
+      "Animal form and function",
+      "Coordination and control in animals"
+    ],
+    "question": "State two differences between the sympathetic and parasympathetic divisions of the autonomic nervous system.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Sympathetic nerves exit only from the spinal cord while parasympathetic nerves exit from both brain and spinal cord",
+        "marks": 1
+      },
+      {
+        "point": "Sympathetic division prepares the body for stress or fight-or-flight while parasympathetic division promotes calming and return to normal conditions",
+        "marks": 1
+      },
+      {
+        "point": "Main neurotransmitter in sympathetic division is norepinephrine whereas parasympathetic division uses acetylcholine",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2C_iv",
+    "topics": [
+      "Animal form and function",
+      "Coordination and control in animals"
+    ],
+    "question": "Name the disease that causes severe mental deterioration characterized by confusion and memory loss in humans.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Alzheimer’s disease",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2C_v_a",
+    "topics": [
+      "Animal form and function",
+      "Sensory reception"
+    ],
+    "question": "State an advantage of binocular vision.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Three-dimensional vision / ability to judge depth, speed or distance of objects",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_2C_v_b",
+    "topics": [
+      "Animal form and function",
+      "Sensory reception"
+    ],
+    "question": "What is the function of the Eustachian tube?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Maintains equal air pressure on both sides of the tympanic membrane",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_i",
+    "topics": [
+      "Evolution and diversity of organisms",
+      "Animal diversity"
+    ],
+    "question": "Name a phylum that contains animals with a hydrostatic skeleton.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Annelida",
+        "marks": 1
+      },
+      {
+        "point": "Nematoda",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_ii_a",
+    "topics": [
+      "Animal form and function",
+      "Support and movement in animals"
+    ],
+    "question": "State one function of fontanelles in the human skull.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Allows compression of the skull during birth / facilitates parturition",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_ii_b",
+    "topics": [
+      "Animal form and function",
+      "Support and movement in animals"
+    ],
+    "question": "Which human vertebrae contain a foramen in each transverse process?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Cervical vertebrae",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_ii_c",
+    "topics": [
+      "Animal form and function",
+      "Support and movement in animals"
+    ],
+    "question": "Give two examples of hinge joints found in the human lower limb.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Knee joint",
+        "marks": 1
+      },
+      {
+        "point": "Ankle joint",
+        "marks": 1
+      },
+      {
+        "point": "Joints between phalanges of toes",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_iii",
+    "topics": [
+      "Animal form and function",
+      "Excretion and osmoregulation in animals"
+    ],
+    "question": "Name a group of animals that possesses salt glands for excretion.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Marine birds",
+        "marks": 1
+      },
+      {
+        "point": "Marine reptiles",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_iv_a",
+    "topics": [
+      "Animal form and function",
+      "Excretion and osmoregulation in animals"
+    ],
+    "question": "Name two substances secreted by the distal convoluted tubule of the human nephron.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Hydrogen ions (H+)",
+        "marks": 1
+      },
+      {
+        "point": "Potassium ions (K+)",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_iv_b",
+    "topics": [
+      "Animal form and function",
+      "Excretion and osmoregulation in animals"
+    ],
+    "question": "State the two sites of action of ADH in the human kidney.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Distal convoluted tubule",
+        "marks": 1
+      },
+      {
+        "point": "Collecting duct",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3A_v",
+    "topics": [
+      "Animal form and function",
+      "Immune system"
+    ],
+    "question": "State the roles of helper T cells in immunity.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Activate cytotoxic T cells to kill infected cells",
+        "marks": 1
+      },
+      {
+        "point": "Activate B lymphocytes to produce antibodies",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3B_i",
+    "topics": [
+      "Animal form and function",
+      "Endocrine system"
+    ],
+    "question": "What is the reason for developing Type I diabetes in humans?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Destruction of pancreatic beta cells by cytotoxic T cells",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3B_ii",
+    "topics": [
+      "Animal form and function",
+      "Endocrine system"
+    ],
+    "question": "Construct a flow chart to show the feedback mechanism related to the action of oxytocin on mammary glands of humans.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Correct sequence of events in the feedback mechanism",
+        "marks": 1
+      },
+      {
+        "point": "Identification of the mechanism as positive feedback",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3B_iii",
+    "topics": [
+      "Animal form and function",
+      "Reproduction in animals"
+    ],
+    "question": "State two advantages of asexual reproduction among invertebrates.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Only one parent is needed",
+        "marks": 1
+      },
+      {
+        "point": "Rapid multiplication of individuals",
+        "marks": 1
+      },
+      {
+        "point": "No time or energy required to find a mate",
+        "marks": 1
+      },
+      {
+        "point": "Genetically identical offspring are produced",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3B_iv_a",
+    "topics": [
+      "Animal form and function",
+      "Reproduction in animals"
+    ],
+    "question": "Write in the correct sequence the entire process of production of sperm in humans starting from spermatogonial stem cells.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Correct sequence of cells: spermatogonial stem cell → spermatogonium → primary spermatocyte → secondary spermatocyte → spermatid → sperm",
+        "marks": 1
+      },
+      {
+        "point": "Correct processes included: mitosis, meiosis I, meiosis II, differentiation",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3B_iv_b",
+    "topics": [
+      "Animal form and function",
+      "Reproduction in animals"
+    ],
+    "question": "State the actions of Depo-Provera injection in human females.",
+    "total_marks": 4,
+    "marking_points": [
+      {
+        "point": "Thickens cervical mucus preventing sperm entry",
+        "marks": 2
+      },
+      {
+        "point": "Makes the endometrium thin preventing implantation if fertilization occurs",
+        "marks": 2
+      }
+    ]
+  },
+  {
+    "id": "BIO_3C_i_a",
+    "topics": [
+      "Microbiology",
+      "Microbial diversity"
+    ],
+    "question": "What are microaerophilic organisms?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Organisms that grow only at low oxygen concentrations lower than that in air",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3C_i_b",
+    "topics": [
+      "Microbiology",
+      "Microbial diversity"
+    ],
+    "question": "Name a microaerophilic bacterial species.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Lactobacillus species",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3C_ii",
+    "topics": [
+      "Microbiology",
+      "Microbial physiology"
+    ],
+    "question": "Why do heterocysts have thick walls?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "To protect nitrogenase enzyme from oxygen which inhibits it",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3C_iii_a",
+    "topics": [
+      "Microbiology",
+      "Sterilization and disinfection"
+    ],
+    "question": "State two methods where dry heat is used for sterilization in a microbiological laboratory.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Direct flaming",
+        "marks": 1
+      },
+      {
+        "point": "Hot air sterilization",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3C_iii_b",
+    "topics": [
+      "Microbiology",
+      "Sterilization and disinfection"
+    ],
+    "question": "State two methods of disinfection used in drinking water treatment.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Chlorination",
+        "marks": 1
+      },
+      {
+        "point": "Use of ozone",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3C_iv",
+    "topics": [
+      "Microbiology",
+      "Food microbiology"
+    ],
+    "question": "Name a fungal species and a bacterial species that cause food intoxication.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Fungal species: Aspergillus flavus",
+        "marks": 1
+      },
+      {
+        "point": "Bacterial species: Staphylococcus aureus",
+        "marks": 1
+      },
+      {
+        "point": "Bacterial species: Clostridium botulinum",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3C_v_a",
+    "topics": [
+      "Microbiology",
+      "Immunology and vaccines"
+    ],
+    "question": "State two differences between subunit vaccines and live attenuated vaccines.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Subunit vaccines contain antigenic fragments and usually require booster doses",
+        "marks": 1
+      },
+      {
+        "point": "Live attenuated vaccines contain weakened live pathogens and usually provide long-lasting immunity without boosters",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_3C_v_b",
+    "topics": [
+      "Microbiology",
+      "Industrial microbiology"
+    ],
+    "question": "State in correct sequence the two steps in the production of vinegar using fruit juice and name one microorganism species used in each step.",
+    "total_marks": 4,
+    "marking_points": [
+      {
+        "point": "Alcoholic fermentation: sugar to ethanol by Saccharomyces cerevisiae",
+        "marks": 2
+      },
+      {
+        "point": "Acetic acid fermentation: ethanol to acetic acid by Acetobacter species or Gluconobacter species",
+        "marks": 2
+      }
+    ]
+  },
+  {
+    "id": "BIO_4A_i",
+    "topics": [
+      "Molecular Biology and Recombinant DNA Technology",
+      "Gene expression"
+    ],
+    "question": "What are the two types of signals that are responsible for epigenetics?",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Inherited signals",
+        "marks": 1
+      },
+      {
+        "point": "Signals by environmental factors / Environmental signals",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4A_ii",
+    "topics": [
+      "Molecular Biology and Recombinant DNA Technology",
+      "Gene expression"
+    ],
+    "question": "State a major function of signal peptides present in certain polypeptides.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Guiding the polypeptides to particular locations in cell / guiding the polypeptides to be secreted / protein trafficking",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4A_iii",
+    "topics": [
+      "Molecular Biology and Recombinant DNA Technology",
+      "Gene expression"
+    ],
+    "question": "Identify the molecule given in the diagram and name the parts labelled as P and Q.",
+    "total_marks": 3,
+    "marking_points": [
+      {
+        "point": "molecule: tRNA / Transfer RNA",
+        "marks": 1
+      },
+      {
+        "point": "P: Amino acid arm / Site where the amino acid attaches",
+        "marks": 1
+      },
+      {
+        "point": "Q: Anticodon",
+        "marks": 1
+      }
+    ],
+    "diagram_reference": "BIO_4A_iii.png"
+  },
+  {
+    "id": "BIO_4A_iv",
+    "topics": [
+      "Molecular Biology and Recombinant DNA Technology",
+      "Genetics"
+    ],
+    "question": "What is the property of the genetic code that allows a gene isolated from one organism to express the same polypeptide when inserted into another organism?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Universality",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4B_i",
+    "topics": [
+      "Molecular Biology and Recombinant DNA Technology",
+      "Genetic engineering & DNA analysis"
+    ],
+    "question": "State two methods used to introduce a foreign DNA molecule into a plant cell.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Using a plant virus vector / transduction",
+        "marks": 1
+      },
+      {
+        "point": "Using gene gun",
+        "marks": 1
+      },
+      {
+        "point": "Agrobacterium mediated gene transfer / Using Agrobacterium",
+        "marks": 1
+      },
+      {
+        "point": "Transformation / mixing large number of copied DNA with host cell",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4B_ii",
+    "topics": [
+      "Environmental Biology",
+      "Biomes & ecosystems of Sri Lanka"
+    ],
+    "question": "Name the three biomes that are located closest to the equator.",
+    "total_marks": 3,
+    "marking_points": [
+      {
+        "point": "Tropical forest",
+        "marks": 1
+      },
+      {
+        "point": "Savanna",
+        "marks": 1
+      },
+      {
+        "point": "Desert",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4B_iii_a",
+    "topics": [
+      "Environmental Biology",
+      "Biomes & ecosystems of Sri Lanka"
+    ],
+    "question": "State the two dominant vegetation types in villus.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Grasses",
+        "marks": 1
+      },
+      {
+        "point": "Sedges",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4B_iii_b",
+    "topics": [
+      "Environmental Biology",
+      "Biomes & ecosystems of Sri Lanka"
+    ],
+    "question": "State two locations in Sri Lanka where villus are common.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Wilpattu (national park)",
+        "marks": 1
+      },
+      {
+        "point": "Mahaweli flood plains",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4B_iv_a",
+    "topics": [
+      "Environmental Biology",
+      "Ecosystems & environmental organization"
+    ],
+    "question": "What is meant by 'population' in ecology?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Group of individuals of the same species living in the same area and producing fertile offspring through interbreeding",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4B_iv_b",
+    "topics": [
+      "Environmental Biology",
+      "Ecosystems & environmental organization"
+    ],
+    "question": "What is meant by 'trophic level' in an ecosystem?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Feeding group in an ecosystem",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4B_iv_c",
+    "topics": [
+      "Environmental Biology",
+      "Ecosystems & environmental organization"
+    ],
+    "question": "What is meant by 'food chain' in an ecosystem?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Linear sequence of organisms through which nutrients and energy pass from one trophic level to the next, beginning with a primary producer",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4B_v_a",
+    "topics": [
+      "Environmental Biology",
+      "Biomes & ecosystems of Sri Lanka"
+    ],
+    "question": "Name two invasive alien plants found in the reservoirs of Sri Lanka.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Salvinia",
+        "marks": 1
+      },
+      {
+        "point": "Water hyacinth",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4B_v_b",
+    "topics": [
+      "Environmental Biology",
+      "Biomes & ecosystems of Sri Lanka"
+    ],
+    "question": "Name two common sea grass genera in Sri Lanka.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Halodule",
+        "marks": 1
+      },
+      {
+        "point": "Halophyla",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4C_v",
+    "topics": [
+      "Environmental Biology",
+      "Aquatic ecosystems & biodiversity"
+    ],
+    "question": "Why are coral reefs considered as rain forests of the sea?",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "High productivity",
+        "marks": 1
+      },
+      {
+        "point": "High diversity of organisms / High species diversity",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4C_i",
+    "topics": [
+      "Environmental Biology",
+      "Biodiversity & conservation"
+    ],
+    "question": "State five important environmental services provided by biodiversity.",
+    "total_marks": 5,
+    "marking_points": [
+      {
+        "point": "CO2 fixation / photosynthesis",
+        "marks": 1
+      },
+      {
+        "point": "Maintaining nutrient cycles / N2 cycle / P cycle",
+        "marks": 1
+      },
+      {
+        "point": "Maintaining water cycle / recycling moisture in atmosphere / recharging groundwater",
+        "marks": 1
+      },
+      {
+        "point": "Soil formation",
+        "marks": 1
+      },
+      {
+        "point": "Preventing soil erosion / Protection of soil from erosion",
+        "marks": 1
+      },
+      {
+        "point": "Regulating climate",
+        "marks": 0
+      },
+      {
+        "point": "Water purification",
+        "marks": 0
+      },
+      {
+        "point": "Pollination",
+        "marks": 0
+      }
+    ]
+  },
+  {
+    "id": "BIO_4C_ii",
+    "topics": [
+      "Environmental Biology",
+      "Environmental threats & desertification"
+    ],
+    "question": "State five human activities that contribute to desertification.",
+    "total_marks": 5,
+    "marking_points": [
+      {
+        "point": "Deforestation",
+        "marks": 1
+      },
+      {
+        "point": "Overexploitation of water",
+        "marks": 1
+      },
+      {
+        "point": "Overexploitation of soil",
+        "marks": 1
+      },
+      {
+        "point": "Uncontrolled mining",
+        "marks": 1
+      },
+      {
+        "point": "Excessive use of agrochemicals",
+        "marks": 1
+      },
+      {
+        "point": "Poor land management",
+        "marks": 0
+      }
+    ]
+  },
+  {
+    "id": "BIO_4C_iii_a",
+    "topics": [
+      "Environmental Biology",
+      "Environmental legislation & policies"
+    ],
+    "question": "What is meant by legislation and policy in environmental conservation?",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "Legislation: Set of regulations and penalty is given when violated",
+        "marks": 1
+      },
+      {
+        "point": "Policy: Set of practices that is followed (and no penalty when not practiced)",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4C_iii_b",
+    "topics": [
+      "Environmental Biology",
+      "Environmental legislation & policies"
+    ],
+    "question": "State a key legislation available in Sri Lanka for environmental conservation.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Flora and Fauna Protection Ordinance / FFPO / National Environmental Act",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4C_iv",
+    "topics": [
+      "Plant Biology",
+      "Tissue culture & plant biotechnology"
+    ],
+    "question": "State the main concept on which tissue culture is based.",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "Totipotent potential / Totipotent / Single cell has the genetic programme to grow into an entire new plant",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "BIO_4C_v_sugar",
+    "topics": [
+      "Food Preservation",
+      "Microbiology & food safety"
+    ],
+    "question": "How does addition of sugar preserve food?",
+    "total_marks": 1,
+    "marking_points": [
+      {
+        "point": "By producing osmotic stress on microorganisms",
+        "marks": 1
+      }
+    ]
+  }
+]

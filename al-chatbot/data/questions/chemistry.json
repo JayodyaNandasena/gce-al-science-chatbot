@@ -1,0 +1,241 @@
+[
+  {
+    "id": "CHEM_1_a_i",
+    "topics": [
+      "Atomic structure",
+      "Structure and bonding"
+    ],
+    "question": "Rules related to polarizing power of cations and polarizability of anions predict that the melting point of KBr is higher than that of LiI.",
+    "total_marks": 4,
+    "marking_points": [
+      {
+        "point": "True",
+        "marks": 4
+      }
+    ]
+  },
+  {
+    "id": "CHEM_1_a_ii",
+    "topics": [
+      "Atomic structure",
+      "Structure and bonding"
+    ],
+    "question": "The electron gain energy of Be is positive.",
+    "total_marks": 4,
+    "marking_points": [
+      {
+        "point": "True",
+        "marks": 4
+      }
+    ]
+  },
+  {
+    "id": "CHEM_1_a_iii",
+    "topics": [
+      "Atomic structure",
+      "Structure and bonding"
+    ],
+    "question": "The spacing between two adjacent lines in a given series of the atomic spectrum of hydrogen decreases gradually in the direction of decreasing wavelengths.",
+    "total_marks": 4,
+    "marking_points": [
+      {
+        "point": "True",
+        "marks": 4
+      }
+    ]
+  },
+  {
+    "id": "CHEM_1_a_iv",
+    "topics": [
+      "Atomic structure",
+      "Structure and bonding"
+    ],
+    "question": "The de Broglie wavelength associated with the N2 molecule is shorter than the de Broglie wavelength of the O2 molecule when travelling at the same velocity.",
+    "total_marks": 4,
+    "marking_points": [
+      {
+        "point": "False",
+        "marks": 4
+      }
+    ]
+  },
+  {
+    "id": "CHEM_1_a_v",
+    "topics": [
+      "Atomic structure",
+      "Structure and bonding"
+    ],
+    "question": "The effective nuclear charge (Zeff) felt by a valence electron of C is greater than the effective nuclear charge felt by a valence electron of N.",
+    "total_marks": 4,
+    "marking_points": [
+      {
+        "point": "False",
+        "marks": 4
+      }
+    ]
+  },
+  {
+    "id": "CHEM_1_a_vi",
+    "topics": [
+      "Atomic structure",
+      "Structure and bonding"
+    ],
+    "question": "All C-O bonds in carbonic acid (H2CO3) are equal in length.",
+    "total_marks": 4,
+    "marking_points": [
+      {
+        "point": "False",
+        "marks": 4
+      }
+    ]
+  },
+  {
+    "id": "CHEM_1_B",
+    "topics": [
+      "Structure and bonding",
+      "Ionic, covalent & coordinate bonding"
+    ],
+    "diagram_reference": "CHEM_1_B.png",
+    "question": "Give the oxidation states of the two chlorine atoms in the structure above. The chlorine atoms are labelled as follows: Cl1-O-Cl2-O.",
+    "total_marks": 2,
+    "marking_points": [
+      {
+        "point": "+I / +1",
+        "marks": 1
+      },
+      {
+        "point": "+VII / +7",
+        "marks": 1
+      }
+    ]
+  },
+  {
+    "id": "CHEM_1_B_iv",
+    "topics": [
+      "Structure and bonding",
+      "VSEPR theory & molecular geometry"
+    ],
+    "passage": "Complete the given table based on the Lewis dot-dash structure and its labelled skeleton given below.",
+    "diagram_reference": "CHEM_1_b_iv.png",
+    "questions": [
+      {
+        "id": "CHEM_1_b_iv",
+        "question": "Complete the table for atoms $N^1$, $C^2$, $C^3$, and $N^4$ regarding VSEPR pairs, electron pair geometry, shape, and hybridization.",
+        "total_marks": 16,
+        "marking_points": [
+          {
+            "point": "VSEPR pairs: $N^1=3$, $C^2=3$, $C^3=2$, $N^4=2$",
+            "marks": 4
+          },
+          {
+            "point": "Electron pair geometry: $N^1=$ trigonal planar, $C^2=$ trigonal planar, $C^3=$ linear, $N^4=$ linear",
+            "marks": 4
+          },
+          {
+            "point": "Shape: $N^1=$ angular/V, $C^2=$ trigonal planar, $C^3=$ linear, $N^4=$ linear",
+            "marks": 4
+          },
+          {
+            "point": "Hybridization: $N^1=sp^2$, $C^2=sp^2$, $C^3=sp$, $N^4=sp$",
+            "marks": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CHEM_1_B_v_viii",
+    "topics": [
+      "Structure and bonding",
+      "Intermolecular forces"
+    ],
+    "passage": "Answer the questions based on the Lewis dot-dash structure given.",
+    "diagram_reference": "CHEM_1_b_iv.png",
+    "questions": [
+      {
+        "id": "CHEM_1_b_v",
+        "question": "Identify the atomic/hybrid orbitals involved in the formation of $\\sigma$ bonds between the atoms: I. $N^1-F$, II. $N^1-C^2$, III. $C^2-H$, IV. $C^2-C^3$, V. $C^3-N^4$, VI. $N^4-O$.",
+        "total_marks": 12,
+        "marking_points": [
+          {
+            "point": "$N^1-F$: $N^1=sp^2$, $F=2p$ or $sp^3$",
+            "marks": 2
+          },
+          {
+            "point": "$N^1-C^2$: $N^1=sp^2$, $C^2=sp^2$",
+            "marks": 2
+          },
+          {
+            "point": "$C^2-H$: $C^2=sp^2$, $H=1s$",
+            "marks": 2
+          },
+          {
+            "point": "$C^2-C^3$: $C^2=sp^2$, $C^3=sp$",
+            "marks": 2
+          },
+          {
+            "point": "$C^3-N^4$: $C^3=sp$, $N^4=sp$",
+            "marks": 2
+          },
+          {
+            "point": "$N^4-O$: $N^4=sp$, $O=2p$ or $sp^3$",
+            "marks": 2
+          }
+        ]
+      },
+      {
+        "id": "CHEM_1_b_vi",
+        "question": "Identify the atomic orbitals involved in the formation of $\\pi$ bonds between the atoms: I. $N^1-C^2$, II. $C^3-N^4$.",
+        "total_marks": 6,
+        "marking_points": [
+          {
+            "point": "$N^1-C^2$: $N^1=2p$, $C^2=2p$",
+            "marks": 2
+          },
+          {
+            "point": "$C^3-N^4$ (first $\\pi$): $C^3=2p$, $N^4=2p$",
+            "marks": 2
+          },
+          {
+            "point": "$C^3-N^4$ (second $\\pi$): $C^3=2p$, $N^4=2p$",
+            "marks": 2
+          }
+        ]
+      },
+      {
+        "id": "CHEM_1_b_vii",
+        "question": "State the approximate bond angles around $N^1$, $C^2$, $C^3$ and $N^4$ atoms.",
+        "total_marks": 4,
+        "marking_points": [
+          {
+            "point": "$N^1: (118^\\circ \\pm 1)$",
+            "marks": 1
+          },
+          {
+            "point": "$C^2: (120^\\circ \\pm 1)$",
+            "marks": 1
+          },
+          {
+            "point": "$C^3: (180^\\circ \\pm 1)$",
+            "marks": 1
+          },
+          {
+            "point": "$N^4: (180^\\circ \\pm 1)$",
+            "marks": 1
+          }
+        ]
+      },
+      {
+        "id": "CHEM_1_b_viii",
+        "question": "Arrange the atoms $N^1$, $C^2$, $C^3$ and $N^4$ in the increasing order of electronegativity.",
+        "total_marks": 4,
+        "marking_points": [
+          {
+            "point": "$C^2 < C^3 < N^1 < N^4$",
+            "marks": 4
+          }
+        ]
+      }
+    ]
+  }
+]

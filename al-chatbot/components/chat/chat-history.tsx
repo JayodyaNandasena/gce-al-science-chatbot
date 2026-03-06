@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Atom, ChevronLeft, LogOut, MessageSquare, MoreVertical, Plus, Trash2} from "lucide-react";
+import {Atom, ChevronLeft, MessageSquare, MoreVertical, Plus, Trash2} from "lucide-react";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {SUBJECTS} from "@/components/chat/subject-config";
 import {Button} from "@/components/ui/button";
@@ -29,8 +29,6 @@ interface ChatHistoryProps {
     onNewChat: () => void;
     subject: string;
     onClose: () => void;
-    user?: { name?: string; email: string } | null;
-    onLogout?: () => void;
     onChatDeleted?: (chatId: number) => void;
 }
 
@@ -41,8 +39,6 @@ export const ChatHistory = ({
                                 onNewChat,
                                 subject,
                                 onClose,
-                                user,
-                                onLogout,
                                 onChatDeleted,
                             }: ChatHistoryProps) => {
     const config = SUBJECTS[subject];
@@ -50,13 +46,6 @@ export const ChatHistory = ({
 
     const [deletingId, setDeletingId] = useState<number | null>(null);
     const [confirmId, setConfirmId] = useState<number | null>(null);
-
-    const initials = user?.name
-        ? user.name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase()
-        : user?.email?.[0]?.toUpperCase() ?? "?";
-
-    const displayName = user?.name || user?.email || "Guest";
-    const displayEmail = user?.email || "";
 
     const handleDeleteConfirm = async () => {
         if (confirmId === null) return;
@@ -197,43 +186,6 @@ export const ChatHistory = ({
                         })}
                     </div>
                 </ScrollArea>
-
-                {/* User footer */}
-                {user && (
-                    <div className="flex-shrink-0 border-t border-gray-200 shadow-lg bg-white">
-                        <div className="px-4 py-4 flex items-center gap-3">
-                            <div
-                                className={`w-9 h-9 rounded-xl bg-gradient-to-br ${config.gradient} flex items-center justify-center flex-shrink-0 shadow-md`}
-                            >
-                                <span className="text-white text-xs font-semibold">{initials}</span>
-                            </div>
-                            <div className="flex-1 min-w-0">
-                                <p className="text-sm font-medium text-gray-800 truncate leading-none">
-                                    {displayName}
-                                </p>
-                                {user.name && (
-                                    <p className="text-xs text-gray-400 truncate mt-0.5">
-                                        {displayEmail}
-                                    </p>
-                                )}
-                            </div>
-                            {onLogout && (
-                                <Button
-                                    variant="ghost"
-                                    size="icon"
-                                    onClick={onLogout}
-                                    className="h-9 w-9 text-gray-400 hover:text-gray-700 hover:bg-gray-100 flex-shrink-0 rounded-xl"
-                                    aria-label="Sign out"
-                                >
-                                    <LogOut className="h-4 w-4"/>
-                                </Button>
-                            )}
-                        </div>
-                        <p className="text-xs text-gray-500 mt-2 pb-4 text-center">
-                            © SciLearn
-                        </p>
-                    </div>
-                )}
             </div>
 
             {/* Delete confirmation dialog */}

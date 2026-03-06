@@ -1,0 +1,197 @@
+export const SUBJECT_TOPICS: Record<string, Record<string, string[]>> = {
+    chemistry: {
+        "Atomic structure": [
+            "Atomic theory & structure",
+            "Electromagnetic radiation and atomic spectra",
+            "Electron configuration & atomic orbitals",
+            "Periodic table & periodic trends",
+        ],
+        "Structure and bonding": [
+            "Ionic, covalent & coordinate bonding",
+            "VSEPR theory & molecular geometry",
+            "Metallic bonding",
+            "Intermolecular forces",
+        ],
+        "Chemical calculations": [
+            "Mole concept & atomic mass",
+            "Chemical formulae & nomenclature",
+            "Balancing equations & stoichiometry",
+            "Solutions & concentration calculations",
+        ],
+        "Gaseous state of matter": [
+            "Gas laws",
+            "Kinetic theory of gases",
+            "Partial pressures & gas mixtures",
+            "Ideal and real gases",
+        ],
+        "Energetics": [
+            "Thermochemistry basics",
+            "Enthalpy changes & thermochemical cycles",
+            "Lattice enthalpy & Born–Haber cycle",
+            "Spontaneity & thermodynamics",
+        ],
+        "Chemistry of s, p and d block elements": [
+            "s-block elements",
+            "p-block elements",
+            "d-block elements",
+        ],
+        "Basic concepts of organic chemistry": [
+            "Organic compounds & functional groups",
+            "IUPAC nomenclature",
+            "Isomerism",
+            "Organic chemistry in everyday life",
+        ],
+        "Hydrocarbons and halohydrocarbons": [
+            "Alkanes, alkenes & alkynes",
+            "Aromatic compounds & benzene reactions",
+            "Substituent effects in benzene",
+            "Alkyl halides & substitution reactions",
+        ],
+        "Oxygen containing organic compounds": [
+            "Alcohols & phenols",
+            "Aldehydes & ketones",
+            "Carboxylic acids & derivatives",
+        ],
+        "Nitrogen containing organic compounds": [
+            "Amines",
+            "Basicity of amines",
+            "Diazonium salts",
+        ],
+        "Chemical Kinetics": [
+            "Reaction rate & rate laws",
+            "Factors affecting reaction rate",
+            "Collision theory & reaction mechanisms",
+            "Catalysis & energy profiles",
+        ],
+        "Chemical Equilibrium": [
+            "Chemical equilibrium principles",
+            "Ionic equilibrium & buffers",
+            "Solubility equilibria",
+            "Phase equilibria & distribution coefficient",
+        ],
+        "Electrochemistry": [
+            "Conductivity & electrolytes",
+            "Electrochemical cells & electrode potentials",
+            "Electrolysis",
+        ],
+        "Industrial chemistry and environmental pollution": [
+            "Industrial chemical processes",
+            "Extraction of metals",
+            "Industrial products & polymers",
+            "Environmental pollution (air & water)",
+        ],
+    },
+
+    physics: {
+        "Measurement": [
+            "Physical quantities, units & dimensions",
+            "Measuring instruments",
+            "Scalars and vectors",
+        ],
+        "Mechanics": [
+            "Kinematics",
+            "Forces & equilibrium",
+            "Work, energy & power",
+            "Rotational motion & circular motion",
+            "Fluid statics and dynamics",
+        ],
+        "Oscillations and Waves": [
+            "Oscillations",
+            "Wave motion & wave properties",
+            "Sound waves & Doppler effect",
+            "Electromagnetic waves",
+            "Optics & optical instruments",
+        ],
+        "Thermal Physics": [
+            "Temperature & thermal expansion",
+            "Gas laws & kinetic theory",
+            "Heat transfer & changes of state",
+            "Thermodynamics",
+        ],
+        "Gravitational field": [
+            "Gravitational field theory",
+            "Earth's gravitational field",
+        ],
+        "Electrostatic field": [
+            "Electrostatic forces & electric fields",
+            "Electric potential & capacitance",
+        ],
+        "Magnetic field": [
+            "Magnetic forces",
+            "Magnetic effects of current",
+        ],
+        "Current electricity": [
+            "Electric current, energy & power",
+            "Electromotive force & circuits",
+            "Kirchhoff's laws",
+            "Electromagnetic induction",
+        ],
+        "Electronics": [
+            "Semiconductors & diodes",
+            "Transistors",
+            "Integrated circuits & operational amplifiers",
+            "Digital electronics",
+        ],
+        "Mechanical properties of matter": [
+            "Elasticity",
+            "Viscosity",
+            "Surface tension",
+        ],
+        "Matter and radiation": [],
+    },
+
+    biology: {
+        "Introduction to Biology": [],
+        "Chemical and cellular basis of life": [
+            "Biological molecules & water",
+            "Cell structure & microscopy",
+            "Cell cycle & cell division",
+            "Enzymes & metabolism",
+            "Photosynthesis & cellular respiration",
+        ],
+        "Evolution and diversity of organisms": [
+            "Origin and evolution of life",
+            "Biological classification",
+            "Diversity of microorganisms",
+            "Diversity of plants",
+            "Diversity of animals",
+        ],
+        "Plant form and function": [
+            "Plant structure & tissues",
+            "Plant growth & development",
+            "Transport & water relations",
+            "Plant nutrition & metabolism",
+            "Plant reproduction & responses",
+        ],
+        "Animal form and function": [
+            "Animal tissues",
+            "Nutrition & digestion",
+            "Circulation & gas exchange",
+            "Excretion & homeostasis",
+            "Nervous system & coordination",
+            "Reproduction in humans and animals",
+            "Skeletal and muscular systems",
+        ],
+        "Genetics": [
+            "Mendelian genetics",
+            "Extensions of Mendelian inheritance",
+            "Population genetics",
+            "Plant and animal breeding",
+        ],
+        "Molecular Biology and Recombinant DNA Technology": [
+            "DNA structure & replication",
+            "Gene expression",
+            "Mutations",
+            "Genetic engineering & DNA analysis",
+            "Applications of biotechnology",
+        ],
+        "Environmental Biology": [
+            "Ecosystems & environmental organization",
+            "Biodiversity",
+            "Biomes & ecosystems of Sri Lanka",
+            "Climate change & environmental conservation",
+        ],
+        "Microbiology": [],
+        "Applied biology": [],
+    },
+};

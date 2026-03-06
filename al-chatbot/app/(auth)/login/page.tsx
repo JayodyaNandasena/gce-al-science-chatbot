@@ -42,7 +42,7 @@ export default function LoginPage() {
                 return;
             }
             toast.success("Welcome back!");
-            router.push("/chat");
+            router.push("/home");
             router.refresh();
         } catch {
             toast.error("Something went wrong. Please try again.");

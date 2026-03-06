@@ -11,8 +11,9 @@ import {TypingIndicator} from "@/components/chat/typing-indicator.js";
 import {Textarea} from "@/components/ui/textarea.js";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu";
 import {SuggestedQuestions} from "@/components/chat/suggested-questions.js";
-import {ModeBanner} from "@/components/chat/mode-banner";
+import {ModeBanner} from "@/components/chat/mode-banner.js";
 import {toast} from "sonner";
+import {UserMenu} from "@/components/user-menu.js";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -52,7 +53,7 @@ export type User = {
 const CHAT_API_URL = "/api/chat";
 const CONVERSATIONS_API_URL = "/api/conversations";
 const STREAM_DELIMITER = "tokens-ended";
-const TITLE_MAX_LENGTH = 15;
+const TITLE_MAX_LENGTH = 20;
 const REDIRECT_MARKER = "Please switch to the";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -158,7 +159,6 @@ const MultiSubjectChatbot = () => {
     const [activeConversationId, setActiveConversationId] = useState<number | null>(null);
     const [messages, setMessages] = useState<ChatMessage[]>([]);
     const [input, setInput] = useState("");
-    const [user, setUser] = useState<User | null>(null);
     const [loadingMessages, setLoadingMessages] = useState(false);
     const [mode, setMode] = useState<"answer" | "reference">("answer");
 
@@ -260,15 +260,6 @@ const MultiSubjectChatbot = () => {
             loadMessages(activeConversationId);
         }
     }, [activeConversationId]);
-
-    useEffect(() => {
-        fetch("/api/auth/me")
-            .then((res) => (res.ok ? res.json() : null))
-            .then((data) => {
-                if (data?.user) setUser(data.user);
-            })
-            .catch(() => null);
-    }, []);
 
     useEffect(() => {
         if (scrollRef.current) {
@@ -465,14 +456,6 @@ const MultiSubjectChatbot = () => {
         textareaRef.current?.focus();
     }, []);
 
-    const handleLogout = useCallback(async () => {
-        await fetch("/api/auth/logout", {method: "POST"});
-        toast.success("Signed out successfully");
-        setTimeout(() => {
-            window.location.href = "/login";
-        }, 1000);
-    }, []);
-
     // ── Derived ───────────────────────────────────────────────────────────────
 
     const subjectConversations = conversations.filter((c) => c.subject === subject);
@@ -491,8 +474,6 @@ const MultiSubjectChatbot = () => {
                     onNewChat={handleNewChat}
                     subject={subject}
                     onClose={() => setSidebarOpen(false)}
-                    user={user}
-                    onLogout={handleLogout}
                     onChatDeleted={(id) => {
                         setConversations((prev) => prev.filter((c) => c.id !== id));
                         if (activeConversationId === id) {
@@ -564,6 +545,7 @@ const MultiSubjectChatbot = () => {
                                     </Button>
                                 );
                             })}
+                            <UserMenu />
                         </nav>
                     </div>
                 </header>
