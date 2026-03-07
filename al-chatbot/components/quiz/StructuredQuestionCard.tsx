@@ -915,7 +915,7 @@ export default function StructuredQuestionCard({question, subject, config, onSco
     }
 
     return (
-        <div style={{display: "flex", flexDirection: "column", gap: "16px"}}>
+        <div style={{display: "flex", flexDirection: "column", gap: "16px", paddingRight:"10px"}}>
 
             {/* ── Passage card ── */}
             <div style={{...card, borderLeft: "4px solid", borderLeftColor: config.activeDot as string}}>

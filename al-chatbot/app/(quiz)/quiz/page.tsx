@@ -81,11 +81,13 @@ export default function QuizPage() {
 
     // ── Subject selected ─────────────────────────────────────────────────────────
     return (
-        <div style={{minHeight: "100vh", display: "flex", flexDirection: "column"}}
-             className={`bg-gradient-to-br ${config!.bgGradient}`}>
+        <div
+            style={{height: "100vh", display: "flex", flexDirection: "column", overflow: "hidden"}}
+            className={`bg-gradient-to-br ${config!.bgGradient}`}
+        >
 
             {/* Sticky header + score strip */}
-            <div style={{position: "sticky", top: 0, zIndex: 10}}>
+            <div style={{flexShrink: 0, zIndex: 10}}>
                 <Header subject={subject} config={config} onSubjectChange={(s) => {
                     setSubject(s);
                     setSelection(null);
@@ -127,31 +129,26 @@ export default function QuizPage() {
                 )}
             </div>
 
-            {/* Main content */}
-            <div style={{flex: 1, overflowY: "auto"}}>
+            {/* Scrollable main content */}
+            <div style={{flex: 1, display: "flex", overflow: "hidden"}}>
                 <div style={{
                     maxWidth: "1400px",
                     margin: "0 auto",
-                    padding: "24px 24px 48px",
+                    padding: "24px 24px",
                     display: "flex",
                     gap: "28px",
-                    alignItems: "flex-start"
+                    width: "100%",
+                    overflow: "hidden"
                 }}>
-
-                    {/* ── Left panel: back + topic selector ── */}
-                    <div style={{width: "460px", flexShrink: 0}}>
-                        <div style={{
-                            background: "#fff",
-                            borderRadius: "12px",
-                            border: "1px solid #e5e7eb",
-                            padding: "16px",
-                            boxShadow: "0 1px 3px rgba(0,0,0,0.06)"
-                        }}>
-                            <p style={{fontSize: "12px", fontWeight: 600, color: "#111827", marginBottom: "14px"}}>
+                    {/* ── Left panel: topic selector ── */}
+                    <div className="w-[350px] shrink-0" style={{overflowY: "auto", maxHeight: "100%"}}>
+                        <div className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+                            <p className="text-xs font-semibold text-gray-900 mb-3">
                                 Select a topic to practice
                             </p>
+
                             {loadingQ ? (
-                                <p style={{fontSize: "13px", color: "#9ca3af"}}>Loading…</p>
+                                <p className="text-sm text-gray-400">Loading…</p>
                             ) : (
                                 <TopicSelector
                                     subject={subject}
@@ -164,7 +161,7 @@ export default function QuizPage() {
                     </div>
 
                     {/* ── Right panel: questions ── */}
-                    <div style={{flex: 1, minWidth: 0}}>
+                    <div style={{flex: 1, minWidth: 0, overflowY: "auto"}}>
                         {!selection ? (
                             // Prompt to pick a topic
                             <div style={{
@@ -224,7 +221,8 @@ export default function QuizPage() {
                                         gap: "5px",
                                         flexWrap: "wrap",
                                         justifyContent: "flex-end",
-                                        maxWidth: "180px"
+                                        maxWidth: "180px",
+                                        paddingRight: "10px"
                                     }}>
                                         {filteredQuestions.map((_, i) => (
                                             <button
@@ -285,10 +283,11 @@ function Header({subject, config, onSubjectChange}: {
     onSubjectChange: (s: QuizSubject) => void;
 }) {
     return (
-        <header style={{background: "#fff", borderBottom: "1px solid #e5e7eb", boxShadow: "0 1px 3px rgba(0,0,0,0.06)"}}>
+        <header
+            style={{background: "#fff", borderBottom: "1px solid #e5e7eb", boxShadow: "0 1px 3px rgba(0,0,0,0.06)"}}>
             <div style={{padding: "12px 20px", display: "flex", alignItems: "center", gap: "12px"}}>
 
-                {/* SciLearn logo — same as home/chat pages */}
+                {/* SciLearn logo */}
                 <div style={{display: "flex", alignItems: "center", gap: "10px", flexShrink: 0}}>
                     <div style={{
                         width: "34px",
@@ -307,14 +306,14 @@ function Header({subject, config, onSubjectChange}: {
                             {config ? `${config.name} Practice` : "SciLearn"}
                         </h1>
                         <p style={{fontSize: "12px", color: "#9ca3af", marginTop: "1px"}}>
-                            GCE A/L examquestions with AI evaluation
+                            GCE A/L exam questions with AI evaluation
                         </p>
                     </div>
                 </div>
 
                 <div style={{flex: 1}} />
 
-                {/* Subject buttons + UserMenu */}
+                {/* Subject buttons & UserMenu */}
                 <nav style={{display: "flex", alignItems: "center", gap: "8px", flexShrink: 0}}>
                     {(Object.entries(QUIZ_SUBJECTS) as [QuizSubject, (typeof QUIZ_SUBJECTS)[QuizSubject]][]).map(([key, cfg]) => {
                         const SubjectIcon = cfg.icon;

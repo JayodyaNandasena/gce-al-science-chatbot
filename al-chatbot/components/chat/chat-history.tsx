@@ -108,7 +108,7 @@ export const ChatHistory = ({
 
                 {/* Chat list */}
                 <ScrollArea className="flex-1 min-h-0">
-                    <div className="p-2">
+                    <div className="p-2 space-y-0.5">
                         {chats.length === 0 && (
                             <div className="text-center py-8 px-4">
                                 <MessageSquare className="w-8 h-8 text-gray-300 mx-auto mb-2"/>
@@ -123,13 +123,13 @@ export const ChatHistory = ({
                             return (
                                 <div
                                     key={chat.id}
-                                    className={`flex items-center mb-1 rounded-xl overflow-hidden transition-all duration-150 px-2 py-3 ${
+                                    className={`flex items-center rounded-xl transition-all duration-150 ${
                                         isActive
                                             ? `bg-gradient-to-r ${config.gradient} text-white shadow-sm`
                                             : "hover:bg-gray-50 text-gray-700"
                                     } ${isDeleting ? "opacity-50 pointer-events-none" : ""}`}
                                 >
-                                    {/* Main clickable area — takes all remaining width */}
+                                    {/* Main clickable area */}
                                     <button
                                         onClick={() => {
                                             onChatSelect(chat.id);
@@ -138,25 +138,21 @@ export const ChatHistory = ({
                                         disabled={isDeleting}
                                         className="flex-1 min-w-0 text-left px-3 py-2.5"
                                     >
-                                        <div className="flex items-center gap-2 min-w-0">
-                                            <div className="min-w-0 flex-1">
-                                                <p className="text-sm font-medium truncate leading-snug">
-                                                    {chat.title}
-                                                </p>
-                                                <p className={`text-xs mt-0.5 truncate ${isActive ? "text-white/70" : "text-gray-400"}`}>
-                                                    {new Date(chat.updated_at).toLocaleDateString(undefined, {
-                                                        month: "short",
-                                                        day: "numeric",
-                                                        hour: "2-digit",
-                                                        minute: "2-digit",
-                                                    })}
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <p className="text-sm font-medium truncate leading-snug">
+                                            {chat.title}
+                                        </p>
+                                        <p className={`text-xs mt-0.5 truncate ${isActive ? "text-white/70" : "text-gray-400"}`}>
+                                            {new Date(chat.updated_at).toLocaleDateString(undefined, {
+                                                month: "short",
+                                                day: "numeric",
+                                                hour: "2-digit",
+                                                minute: "2-digit",
+                                            })}
+                                        </p>
                                     </button>
 
-                                    {/* ⋮ dropdown — fixed width, never shrinks */}
-                                    <div className="shrink-0 pr-1">
+                                    {/* ⋮ dropdown */}
+                                    <div className="shrink-0 pr-2">
                                         <DropdownMenu>
                                             <DropdownMenuTrigger asChild>
                                                 <button

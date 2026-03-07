@@ -24,7 +24,7 @@ export default function SubjectSelector({ onSelect }: Props) {
                     Choose your subject
                 </h1>
                 <p style={{ fontSize: "14px", color: "#6b7280", maxWidth: "360px", margin: "0 auto" }}>
-                    Answer exam-style questions and receive instant AI feedback powered by Groq LLM.
+                    Answer past paper questions and receive instant AI feedback
                 </p>
             </div>
 

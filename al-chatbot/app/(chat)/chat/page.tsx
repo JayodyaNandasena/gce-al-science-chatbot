@@ -552,7 +552,7 @@ const MultiSubjectChatbot = () => {
 
                 {/* Messages */}
                 <main className="flex-1 overflow-hidden">
-                    <div className="max-w-4xl mx-auto px-4 py-6">
+                    <div className="max-w-4xl mx-auto px-4 pt-3">
                         {/* Mode banner */}
                         <ModeBanner mode={mode} gradient={config.gradient}/>
                     </div>
@@ -597,7 +597,7 @@ const MultiSubjectChatbot = () => {
                                     onChange={(e) => setInput(e.target.value)}
                                     onKeyDown={handleKeyDown}
                                     placeholder={`Ask a ${config.name.toLowerCase()} question…`}
-                                    className={`min-h-[52px] max-h-32 resize-none rounded-xl ${config.borderColor} focus:${config.borderColor} pl-24 pr-4`}
+                                    className={`min-h-[52px] max-h-32 resize-none rounded-xl ${config.borderColor} focus:${config.borderColor} px-4`}
                                     rows={1}
                                     aria-label="Chat input"
                                     disabled={loadingMessages}
