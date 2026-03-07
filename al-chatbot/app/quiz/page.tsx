@@ -1,15 +1,15 @@
 "use client";
 
 import {useEffect, useState} from "react";
-import {Button} from "@/components/ui/button";
+import {Button} from "@/components/ui/button.js";
 import {Atom, Inbox as InboxIcon, MousePointerClick} from "lucide-react";
-import {QUIZ_SUBJECTS, type QuizSubject} from "@/components/quiz/subject-config";
-import SubjectSelector from "@/components/quiz/SubjectSelector";
-import TopicSelector, {type TopicSelection} from "@/components/quiz/TopicSelector";
-import QuestionCard from "@/components/quiz/QuestionCard";
-import StructuredQuestionCard from "@/components/quiz/StructuredQuestionCard";
-import type {Question} from "@/lib/types";
-import {isStructured} from "@/lib/types";
+import {QUIZ_SUBJECTS, type QuizSubject} from "@/components/quiz/subject-config.js";
+import SubjectSelector from "@/components/quiz/SubjectSelector.js";
+import TopicSelector, {type TopicSelection} from "@/components/quiz/TopicSelector.js";
+import QuestionCard from "@/components/quiz/QuestionCard.js";
+import StructuredQuestionCard from "@/components/quiz/StructuredQuestionCard.js";
+import type {Question} from "@/lib/types.js";
+import {isStructured} from "@/lib/types.js";
 import {UserMenu} from "@/components/user-menu.js";
 
 export default function QuizPage() {

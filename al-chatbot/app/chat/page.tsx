@@ -9,7 +9,7 @@ import {ScrollArea} from "@/components/ui/scroll-area.js";
 import {Message} from "@/components/chat/message.js";
 import {TypingIndicator} from "@/components/chat/typing-indicator.js";
 import {Textarea} from "@/components/ui/textarea.js";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu.js";
 import {SuggestedQuestions} from "@/components/chat/suggested-questions.js";
 import {ModeBanner} from "@/components/chat/mode-banner.js";
 import {toast} from "sonner";
