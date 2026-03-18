@@ -1,0 +1,20 @@
+# requirements.txt
+# Install with:  pip install -r requirements.txt
+
+# PDF text extraction
+PyMuPDF==1.24.3
+
+# Ollama Python client (llama3 for subtopics, nomic-embed-text for embeddings)
+ollama==0.3.3
+
+# Pinecone vector database
+pinecone-client==4.1.0
+
+# MySQL
+mysql-connector-python==8.3.0
+
+# Environment variables
+python-dotenv==1.0.1
+
+# Keep numpy below 2.0 to avoid compatibility issues
+numpy<2
