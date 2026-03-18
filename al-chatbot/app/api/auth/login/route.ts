@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import bcrypt from 'bcryptjs';
-import pool from '@/lib/db';
-import { signToken } from '@/lib/jwt';
+import pool from '@/lib/db.js';
+import { signToken } from '@/lib/jwt.js';
 import { RowDataPacket } from 'mysql2';
 
 export async function POST(req: NextRequest) {

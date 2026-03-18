@@ -1,0 +1,121 @@
+{
+  "Introduction to Biology": {
+    "normal": [
+      "Biology is a science which is focused on studying of <mark>living organisms</mark>. (Bios – Life, logos – 'study of')",
+      "The concept of <mark>&ldquo;life&rdquo;</mark> is not easy to define and scientists are still unable to provide an <mark>acceptable definition</mark> for life.",
+      "&ldquo;Life&rdquo; is something <mark>special and unique</mark> which cannot be explained using <mark>laws of chemistry and physics</mark>.",
+      "Biology is <mark>complex and vast</mark>, therefore it is divided into three primary branches: Zoology (study of animals), Botany (study of plants), Microbiology (study of microorganisms).",
+      "Areas of study in these branches include: Cell Biology (studying cells), Histology (studying tissues), Anatomy (studying gross structure of the body), Physiology (studying functions), Biochemistry (studying biological molecules), Genetics (studying inheritance), Ecology (studying environment).",
+      "Life on earth formed around <mark>3.8 billion years ago</mark>.",
+      "The first organisms are believed to be <mark>heterotrophic, anaerobic prokaryotes</mark>.",
+      "Evolution resulted in <mark>extensive biodiversity</mark> which exists in the <mark>biosphere</mark>.",
+      "Scientists assume there are about <mark>10 to over 100 million species</mark> in the world.",
+      "Every organism has a <mark>specific role in the environment</mark> for the existence of the biosphere.",
+      "Biological diversity includes the variety of <mark>plants, animals and microorganisms</mark>, diversity of <mark>genes</mark>, and different <mark>ecosystems</mark> such as deserts, rainforests and coral reefs.",
+      "Studying <mark>histology and anatomy</mark> helps understand <mark>organ structure</mark>, functions of organ systems, and <mark>structure–function relationship</mark>.",
+      "Natural resources are <mark>limited</mark>; overuse due to <mark>population growth</mark> causes problems such as <mark>pollution, biodiversity loss, desertification</mark>.",
+      "Sustainable food production involves <mark>environmentally safe methods</mark>; methods include high yielding varieties, disease resistant varieties, and improved post-harvest technology.",
+      "Plants are <mark>primary producers</mark>; animals depend directly or indirectly on them. Understanding plants helps produce <mark>high yielding and disease resistant plants</mark>.",
+      "Knowledge of causes and effects of diseases is important for maintaining a <mark>healthy human body</mark>. Non-communicable diseases include <mark>cancer, heart disease, diabetes, chronic renal disease</mark>. Communicable diseases include <mark>dengue, AIDS</mark>.",
+      "Knowledge of biological concepts is used in <mark>legal and ethical issues</mark>, such as parentage testing, criminal investigations, and immigration disputes. <mark>DNA fingerprinting</mark> is applied.",
+      "Organisms show diversity based on <mark>size</mark>, <mark>shape</mark>, <mark>form</mark>, and <mark>habitat</mark>.",
+      "Characteristics of organisms include <mark>order and organization</mark>, <mark>metabolism</mark>, <mark>growth and development</mark>, <mark>irritability and coordination</mark>, <mark>adaptation</mark>, <mark>reproduction</mark>, and <mark>heredity and evolution</mark>.",
+      "Hierarchical levels of organization: <mark>Molecules → Organelles → Cells → Tissues → Organs → Organ systems → Organisms → Populations → Communities → Ecosystems → Biosphere</mark>."
+    ],
+    "revision": [
+      "Biology – study of <mark>living organisms</mark>",
+      "<mark>Life</mark> difficult to define",
+      "Life cannot be explained only by <mark>chemistry and physics</mark>",
+      "Main branches – <mark>Zoology, Botany, Microbiology</mark>",
+      "Study areas: <mark>Cell Biology, Histology, Anatomy, Physiology, Biochemistry, Genetics, Ecology</mark>",
+      "Life formed <mark>3.8 billion years ago</mark>",
+      "First organisms – <mark>heterotrophic anaerobic prokaryotes</mark>",
+      "Evolution → <mark>extensive biodiversity</mark>",
+      "Species – about <mark>10 to over 100 million</mark>",
+      "Every organism has <mark>specific role in environment</mark>",
+      "Diversity – <mark>plants, animals, microorganisms, genes, ecosystems</mark>",
+      "Histology & anatomy → understand <mark>structure and function</mark>",
+      "Natural resources <mark>limited</mark>; overuse → <mark>pollution, biodiversity loss, desertification</mark>",
+      "Sustainable food production – <mark>environmentally safe</mark>; methods: high yielding, disease resistant, improved post-harvest",
+      "Plants – <mark>primary producers</mark>; understanding → <mark>high yielding & disease resistant</mark>",
+      "Knowledge of diseases: Non-communicable (<mark>cancer, heart disease, diabetes, CKDu</mark>), Communicable (<mark>dengue, AIDS</mark>)",
+      "Biology used in <mark>legal & ethical issues</mark>, e.g., <mark>DNA fingerprinting</mark>",
+      "Organism diversity – <mark>size, shape, form, habitat</mark>",
+      "Characteristics – <mark>order, metabolism, growth, irritability, adaptation, reproduction, heredity/evolution</mark>",
+      "Hierarchy – <mark>Molecules → Organelles → Cells → Tissues → Organs → Organ systems → Organisms → Populations → Communities → Ecosystems → Biosphere</mark>"
+    ]
+  },
+  "Chemical and Cellular Basis of Life": {
+    "Biological Molecules & Water": {
+      "normal": [
+        "Polarity is an <mark>uneven charge distribution</mark> within a molecule.",
+        "In a water molecule, oxygen atom is slightly <mark>negative</mark> and hydrogen atom is slightly <mark>positive</mark> (δ- partial negative, δ+ partial positive).",
+        "Weak attractions between the slightly polar hydrogen atom of one water molecule and the slightly polar oxygen atom of an adjacent water molecule are known as <mark>hydrogen bonds</mark>.",
+        "Hydrogen bonds play a major role in maintaining all the <mark>properties of water</mark>.",
+        "The properties of water arise due to attractions of different water molecules. When water is in liquid form, its H bonds are <mark>very fragile</mark>, forming, breaking, and reforming frequently.",
+        "Four major properties of water to maintain life on earth: <mark>cohesive behavior, ability to moderate temperature, expansion upon freezing, versatility as a solvent</mark>.",
+        "<mark>Cohesive behavior</mark>: Attraction between water molecules due to hydrogen bonding is cohesion. Attraction between water molecules and other substances is adhesion.",
+        "Cohesion and adhesion allow water to act as a <mark>transport medium</mark>.",
+        "Due to cohesion, water and dissolved substances such as minerals and nutrients transport through vascular tissues, <mark>xylem and phloem</mark>, against gravity.",
+        "Adhesion between water molecules and cell walls also helps conduction of water and dissolved substances.",
+        "Water has a <mark>high surface tension</mark>, forming a water film on aquatic systems. Small insects (e.g., water skaters) can walk on the water surface.",
+        "<mark>Ability to moderate temperature</mark>: Water can absorb or release a relatively high amount of heat energy with slight temperature change.",
+        "High <mark>specific heat</mark> allows water to function as a <mark>thermal buffer</mark> in living systems and aquatic bodies.",
+        "High <mark>heat of vaporization</mark> allows organisms to release much heat with minimum water loss.",
+        "Examples: Evaporation of sweat maintains constant body temperature; transpiration keeps plant surfaces cool.",
+        "<mark>Expansion upon freezing</mark>: Water has maximum density at 4˚C. Below 4˚C, water forms a crystalline lattice (ice) that floats.",
+        "Ice floating is important in polar regions, allowing organisms in aquatic bodies to survive winter.",
+        "<mark>Versatility as a solvent</mark>: Water dissolves polar molecules (e.g., glucose), non-polar ionic (e.g., NaCl), and molecules with both polar and ionic regions (e.g., lysozymes) due to hydrogen bonding.",
+        "Solubility in water depends on <mark>polarity</mark>, not solely ionic nature."
+      ],
+      "revision": [
+        "Polarity – <mark>uneven charge distribution</mark> in a molecule",
+        "Water molecule: Oxygen δ-, Hydrogen δ+",
+        "Hydrogen bonds – weak attractions between water molecules",
+        "Hydrogen bonds maintain <mark>properties of water</mark>",
+        "Properties of water: <mark>cohesion, moderate temperature, expansion upon freezing, solvent versatility</mark>",
+        "Cohesion – attraction between water molecules; adhesion – attraction to other substances",
+        "Water transports <mark>minerals & nutrients</mark> via <mark>xylem & phloem</mark>",
+        "High <mark>surface tension</mark> allows water film; insects can walk on water",
+        "High <mark>specific heat</mark> & <mark>heat of vaporization</mark> → thermal buffer; body/plant cooling",
+        "Expansion on freezing → maximum density at 4˚C; ice floats, protecting aquatic life",
+        "Solvent versatility: dissolves polar (glucose), ionic (NaCl), and polar-ionic molecules (lysozymes)",
+        "Solubility depends on <mark>polarity</mark>"
+      ]
+    },
+    "Cell structure & microscopy": {
+      "normal": [
+        "Advancement of <mark>cytology</mark> is mostly based on <mark>microscopy</mark>. The discovery and early study of cells progressed with the invention of the <mark>microscope</mark>.",
+        "Light microscope: Visible light passes through the specimen and then through glass lenses. Lenses refract light to magnify the image projected into the eye. Simplest microscope has a single lens.",
+        "Compound light microscope: Commonly used in <mark>school and medical laboratories</mark>. Resolution power and magnification are key parameters.",
+        "Magnification is the ratio of an object's image size to its actual size. Maximum magnification of a light microscope is <mark>1000×</mark>. Resolution power is the minimum distance between two points that can be distinguished (<mark>0.2 µm</mark> for light microscope).",
+        "Magnification depends on two lenses: objective and eyepiece. Total magnification = <mark>objective × eyepiece</mark>. Example: Objective = 40×, Eyepiece = 15× → Total = 600×",
+        "Electron microscope: Uses <mark>shorter wavelength electrons</mark> to overcome the resolution limit of light microscopes. Can theoretically magnify up to 1×10⁸, practically ~5×10⁵.",
+        "Electron microscopes reveal organelles and subcellular structures impossible to see with light microscopes.",
+        "Two types of electron microscopes: 1) <mark>Transmission electron microscope (TEM)</mark>, 2) <mark>Scanning electron microscope (SEM)</mark>",
+        "TEM: Studies internal structures. Electrons pass through thin, metal-stained specimens. Image reflects electron patterns.",
+        "SEM: Studies surface structure. Fine beam of electrons reflects from gold-coated specimens. Ideal for <mark>3D surface view</mark>.",
+        "Differences between Light and Electron microscopes: Light uses <mark>glass lenses</mark> & can see living objects; Electron uses <mark>magnets</mark>, requires staining with heavy metals, and observes only non-living objects.",
+        "Cell theory: All organisms are composed of cells; the cell is the <mark>basic structural and functional unit</mark>; all cells arise from <mark>pre-existing cells</mark>.",
+        "Historical contributors: Robert Hooke (1665) – coined 'cell'; Anton van Leeuwenhoek (1650) – first observed living single-celled organisms; Schleiden (1831) – all plants made of cells; Schwann (1839) – all animals made of cells; Virchow (1855) – cells arise from pre-existing cells.",
+        "Organization of cells: Two kinds – <mark>Prokaryotic</mark> and <mark>Eukaryotic</mark>. All cells share basic features: bounded by <mark>plasma membrane</mark>, contain <mark>cytosol</mark>, carry <mark>DNA</mark>, have <mark>ribosomes</mark>.",
+        "Prokaryotic vs Eukaryotic cells: Prokaryotes – <mark>bacteria, archaebacteria</mark>; Eukaryotes – <mark>protists, fungi, plants, animals</mark>. Differences include <mark>size, organelles, DNA, ribosomes, cell wall, flagella, respiration, photosynthesis</mark>."
+      ],
+      "revision": [
+        "Cytology advances mainly due to <mark>microscopy</mark>",
+        "Light microscope: <mark>visible light</mark>, glass lenses, max 1000× magnification, resolution 0.2 µm",
+        "Compound microscope: used in <mark>schools and medical labs</mark>",
+        "Total magnification = objective × eyepiece (e.g., 40× × 15× = 600×)",
+        "Electron microscope: <mark>shorter wavelength electrons</mark>, reveals organelles, max practical magnification ~5×10⁵",
+        "Types: <mark>TEM</mark> – internal structures, <mark>SEM</mark> – surface 3D view",
+        "Light vs Electron: Light – glass lenses, living objects; Electron – magnets, non-living, heavy metal stains",
+        "Cell theory: all organisms composed of <mark>cells</mark>, basic unit, arise from pre-existing cells",
+        "Key contributors: <mark>Hooke, Leeuwenhoek, Schleiden, Schwann, Virchow</mark>",
+        "Cell organization: <mark>Prokaryotic vs Eukaryotic</mark>",
+        "All cells: <mark>plasma membrane, cytosol, DNA, ribosomes</mark>",
+        "Prokaryote: <mark>bacteria, archaebacteria</mark>, small, simple, no nucleus, binary fission",
+        "Eukaryote: <mark>protists, fungi, plants, animals</mark>, larger, membrane-bound organelles, mitosis/meiosis"
+      ]
+    }
+  }
+}

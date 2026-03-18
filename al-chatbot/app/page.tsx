@@ -4,7 +4,7 @@ import { getCurrentUser } from "@/lib/auth";
 export default async function Home() {
   const user = await getCurrentUser();
   if (user) {
-    redirect("/chat");
+    redirect("/home");
   } else {
     redirect("/login");
   }

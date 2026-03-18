@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { LogOut, ChevronDown, House, MessageCircle, BookOpenCheck } from "lucide-react";
+import {LogOut, ChevronDown, House, MessageCircle, BookOpenCheck, Notebook} from "lucide-react";
 import { toast } from "sonner";
 
 interface User {
@@ -26,6 +26,7 @@ const NAV_ITEMS = [
     { label: "Home",  href: "/home",  icon: House },
     { label: "Chat",  href: "/chat",  icon: MessageCircle },
     { label: "Quiz",  href: "/quiz",  icon: BookOpenCheck },
+    { label: "Notes",  href: "/notes",  icon: Notebook },
 ];
 
 export function UserMenu() {

@@ -1,67 +1,15 @@
-// import { NextRequest, NextResponse } from "next/server";
-// import { callEvaluate } from "@/lib/langchain";
-//
-// export const runtime = "nodejs";
-//
-// export async function POST(req: NextRequest) {
-//     const { question, userAnswer, markingPoints, totalMarks } = await req.json();
-//
-//     if (!question || !userAnswer) {
-//         return NextResponse.json(
-//             { error: "No question or answer in the request" },
-//             { status: 400 }
-//         );
-//     }
-//
-//     try {
-//         // Format the marking points array into a readable string for the prompt,
-//         // e.g.  "1. [1 mark] Transport of fatty acids"
-//         const markingScheme = (markingPoints as { point: string; marks: number }[])
-//             .map(
-//                 (mp, i) =>
-//                     `${i + 1}. [${mp.marks} mark${mp.marks > 1 ? "s" : ""}] ${mp.point}`
-//             )
-//             .join("\n");
-//
-//         const transformStream = new TransformStream();
-//         const readableStream = await callEvaluate({
-//             question,
-//             markingScheme,
-//             studentAnswer: userAnswer,
-//             transformStream,
-//         });
-//
-//         return new Response(readableStream, {
-//             headers: {
-//                 "Content-Type": "text/event-stream",
-//                 "Cache-Control": "no-cache",
-//                 Connection: "keep-alive",
-//             },
-//         });
-//     } catch (error) {
-//         console.error("[evaluate/route] error:", error);
-//         return NextResponse.json(
-//             { error: "Something went wrong. Try again!" },
-//             { status: 500 }
-//         );
-//     }
-// }
-
-
 import {NextRequest, NextResponse} from "next/server.js";
 import {callEvaluate, callEvaluateWithImage} from "@/lib/langchain.js";
 
 export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
-    // Image submissions arrive as multipart/form-data.
-    // Text submissions arrive as application/json.
     const contentType = req.headers.get("content-type") ?? "";
     const isImageSubmission = contentType.includes("multipart/form-data");
 
     try {
         if (isImageSubmission) {
-            // ── Image path ──────────────────────────────────────────────────────────
+            // Image path
             const form = await req.formData();
 
             const question = form.get("question") as string;
@@ -102,7 +50,7 @@ export async function POST(req: NextRequest) {
             });
 
         } else {
-            // ── Text path ───────────────────────────────────────────────────────────
+            // Text path
             const {question, userAnswer, markingPoints, subject} = await req.json();
 
             if (!question || !userAnswer) {

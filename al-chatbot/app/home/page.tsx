@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {ArrowRight, Atom, BookOpenCheck, Dna, FlaskConical, MessageCircle} from "lucide-react";
+import {ArrowRight, Atom, BookOpenCheck, Dna, FlaskConical, MessageCircle, BookOpen} from "lucide-react";
 import {UserMenu} from "@/components/user-menu.js";
 
 const SUBJECTS = [
@@ -90,12 +90,12 @@ export default function HomePage() {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    padding: 28px 36px;
+                    padding: 28px 48px;
                     overflow: hidden;
                 }
                 .home-inner {
                     width: 100%;
-                    max-width: 880px;
+                    max-width: 1100px;
                     display: flex;
                     flex-direction: column;
                     gap: 28px;
@@ -189,7 +189,7 @@ export default function HomePage() {
                 /* CARDS */
                 .home-cards {
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    grid-template-columns: 1fr 1fr 1fr;
                     gap: 16px;
                 }
                 .feature-card {
@@ -254,6 +254,11 @@ export default function HomePage() {
                     border: 1px solid #e5e7eb;
                     color: #6b7280;
                 }
+                .feature-badge-green {
+                    background: #f0fdf4;
+                    border: 1px solid #bbf7d0;
+                    color: #15803d;
+                }
                 .feature-card-cta {
                     display: inline-flex;
                     align-items: center;
@@ -315,8 +320,9 @@ export default function HomePage() {
                                 <span className="home-title-accent">with AI</span>
                             </h1>
                             <p className="home-subtitle">
-                                Ask questions about the syllabus or practise with past-paper questions — graded
-                                instantly by AI.
+                                Ask questions about the syllabus and
+                                Practise with past-paper questions
+                                — graded instantly by AI
                             </p>
                         </section>
 
@@ -346,9 +352,7 @@ export default function HomePage() {
                                     </div>
                                     <div>
                                         <div className="feature-card-title">Ask the chatbot</div>
-                                        <div className="feature-card-desc">Get explanations, examples and textbook
-                                            references.
-                                        </div>
+                                        <div className="feature-card-desc">Get explanations, examples and textbook references.</div>
                                     </div>
                                 </div>
                                 <div className="feature-card-badges">
@@ -369,9 +373,7 @@ export default function HomePage() {
                                     </div>
                                     <div>
                                         <div className="feature-card-title">Practice questions</div>
-                                        <div className="feature-card-desc">Answer exam-style questions and get instant
-                                            AI feedback.
-                                        </div>
+                                        <div className="feature-card-desc">Answer exam-style questions and get instant AI feedback.</div>
                                     </div>
                                 </div>
                                 <div className="feature-card-badges">
@@ -381,6 +383,27 @@ export default function HomePage() {
                                 </div>
                                 <div className="feature-card-cta" style={{color: "#0d9488"}}>
                                     Start practising <ArrowRight size={15}/>
+                                </div>
+                            </Link>
+
+                            <Link href="/notes" className="feature-card">
+                                <div className="feature-card-header">
+                                    <div className="feature-card-icon"
+                                         style={{background: "linear-gradient(135deg,#059669,#16a34a)"}}>
+                                        <BookOpen size={21} color="white" strokeWidth={2}/>
+                                    </div>
+                                    <div>
+                                        <div className="feature-card-title">Revision notes</div>
+                                        <div className="feature-card-desc">Topic-by-topic notes with key term highlights and revision mode.</div>
+                                    </div>
+                                </div>
+                                <div className="feature-card-badges">
+                                    {["Full notes", "Revision mode", "Download PDF"].map(eg => (
+                                        <span key={eg} className="feature-badge feature-badge-green">{eg}</span>
+                                    ))}
+                                </div>
+                                <div className="feature-card-cta" style={{color: "#15803d"}}>
+                                    Start reading <ArrowRight size={15}/>
                                 </div>
                             </Link>
 
